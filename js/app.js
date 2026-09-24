@@ -15,6 +15,47 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
+ * Determina si el mobile dock debe estar oculto:
+ * 1) Si el menú móvil lateral (drawer) está abierto o body tiene .menu-open
+ * 2) Si el modal de asociación está abierto o body tiene .modal-open
+ * 3) Si el footer está visible en pantalla (o a menos de 50px del viewport)
+ * 4) Si el usuario ha scrolleado hasta el final de la página
+ */
+function checkFooterIntersection() {
+  const mobileDock = document.getElementById('mobileDock');
+  if (!mobileDock) return;
+
+  const isMenuOpen = document.body.classList.contains('menu-open') ||
+                     document.getElementById('mobileDrawer')?.classList.contains('translate-x-0');
+  const isModalOpen = document.body.classList.contains('modal-open') ||
+                      (!document.getElementById('registerModal')?.classList.contains('hidden'));
+
+  if (isMenuOpen || isModalOpen) {
+    mobileDock.classList.add('dock-hidden');
+    return;
+  }
+
+  const footerEl = document.querySelector('footer');
+  if (footerEl) {
+    const footerRect = footerEl.getBoundingClientRect();
+    if (footerRect.top <= (window.innerHeight + 50)) {
+      mobileDock.classList.add('dock-hidden');
+      return;
+    }
+  }
+
+  const scrollBottom = window.innerHeight + window.scrollY;
+  const docHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+  if (docHeight > window.innerHeight && scrollBottom >= (docHeight - 120)) {
+    mobileDock.classList.add('dock-hidden');
+    return;
+  }
+
+  mobileDock.classList.remove('dock-hidden');
+}
+window.checkFooterIntersection = checkFooterIntersection;
+
+/**
  * Mobile Drawer Menu
  */
 function initMobileMenu() {
@@ -28,6 +69,7 @@ function initMobileMenu() {
   if (!openBtn || !drawer) return;
 
   const openDrawer = () => {
+    document.body.classList.add('menu-open');
     drawer.classList.remove('translate-x-full');
     drawer.classList.add('translate-x-0');
     if (backdrop) {
@@ -41,16 +83,16 @@ function initMobileMenu() {
   };
 
   const closeDrawer = () => {
+    document.body.classList.remove('menu-open');
     drawer.classList.add('translate-x-full');
     drawer.classList.remove('translate-x-0');
     if (backdrop) {
       backdrop.classList.add('opacity-0', 'pointer-events-none');
       backdrop.classList.remove('opacity-100', 'pointer-events-auto');
     }
-    if (mobileDock) {
-      mobileDock.classList.remove('dock-hidden');
-    }
     document.body.style.overflow = '';
+    // Respetar estado del footer: solo reaparece si no estamos en el footer
+    checkFooterIntersection();
   };
 
   openBtn.addEventListener('click', openDrawer);
@@ -138,8 +180,24 @@ function initMobileDock() {
     hideAllLabels();
   };
 
+  const footerEl = document.querySelector('footer');
+
+  if (footerEl && 'IntersectionObserver' in window) {
+    const footerObserver = new IntersectionObserver((entries) => {
+      entries.forEach(() => {
+        checkFooterIntersection();
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px 60px 0px',
+      threshold: [0, 0.05, 0.1, 0.2, 0.5, 1.0]
+    });
+    footerObserver.observe(footerEl);
+  }
+
   requestAnimationFrame(() => {
     syncInitialItem();
+    checkFooterIntersection();
   });
 
   // Interactividad con clics y taps en los ítems del dock
@@ -220,21 +278,25 @@ function initMobileDock() {
 
   window.addEventListener('resize', () => {
     moveTo(getActiveItem(), false);
+    checkFooterIntersection();
   });
 
   // Desbloqueo tras finalizar scroll
   window.addEventListener('scrollend', () => {
     isProgrammaticScroll = false;
+    checkFooterIntersection();
     updateDockOnScroll();
   }, { passive: true });
 
   // Sincronización del Dock al scrollear libremente la página (Scroll-Spy con requestAnimationFrame)
   let isScrollTicking = false;
   window.addEventListener('scroll', () => {
-    if (isProgrammaticScroll) return;
     if (!isScrollTicking) {
       window.requestAnimationFrame(() => {
-        updateDockOnScroll();
+        checkFooterIntersection();
+        if (!isProgrammaticScroll) {
+          updateDockOnScroll();
+        }
         isScrollTicking = false;
       });
       isScrollTicking = true;
@@ -494,8 +556,22 @@ function initRegistrationModal() {
   if (!modal) return;
 
   const openModal = (sportDefault = 'rugby') => {
+    // Si el menú lateral móvil estaba abierto, cerrarlo
+    const drawer = document.getElementById('mobileDrawer');
+    const backdrop = document.getElementById('drawerBackdrop');
+    if (drawer && drawer.classList.contains('translate-x-0')) {
+      drawer.classList.add('translate-x-full');
+      drawer.classList.remove('translate-x-0');
+      if (backdrop) {
+        backdrop.classList.add('opacity-0', 'pointer-events-none');
+        backdrop.classList.remove('opacity-100', 'pointer-events-auto');
+      }
+      document.body.classList.remove('menu-open');
+    }
+
     modal.classList.remove('hidden');
     modal.classList.add('flex');
+    document.body.classList.add('modal-open');
     if (mobileDock) {
       mobileDock.classList.add('dock-hidden');
     }
@@ -510,10 +586,10 @@ function initRegistrationModal() {
   const closeModal = () => {
     modal.classList.add('hidden');
     modal.classList.remove('flex');
-    if (mobileDock) {
-      mobileDock.classList.remove('dock-hidden');
-    }
+    document.body.classList.remove('modal-open');
     document.body.style.overflow = '';
+    // Respetar estado del footer: solo reaparece si no estamos en el footer
+    checkFooterIntersection();
   };
 
   openBtns.forEach(btn => {
@@ -670,20 +746,47 @@ function initMobileHeroVideo() {
 }
 
 /**
- * Tab switcher for Section 6 (El Club: Historia, Comisión, CAPS, Servicios, Llegar)
+ * Smooth horizontal scroll animation for containers (works across all mobile engines)
  */
-window.switchClubTab = function(tabId) {
+function smoothScrollClubTabs(element, targetScrollLeft, duration = 320) {
+  if (!element) return;
+  const start = element.scrollLeft;
+  const change = targetScrollLeft - start;
+  if (Math.abs(change) < 2) return;
+
+  const startTime = performance.now();
+  function step(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const ease = 1 - (1 - progress) * (1 - progress); // Ease out quad
+    element.scrollLeft = start + change * ease;
+    if (progress < 1) {
+      requestAnimationFrame(step);
+    }
+  }
+  requestAnimationFrame(step);
+}
+
+/**
+ * Tab switcher for Section 6 (El Club: Historia, Comisión, CAPS, Servicios, Llegar)
+ * Automatically displaces/scrolls the horizontal tab bar on mobile so the active tab
+ * and the next option are clearly revealed without manual drag.
+ */
+window.switchClubTab = function(tabId, shouldScrollToHeader = false) {
   const tabs = ['historia', 'comision', 'caps', 'servicios', 'llegar'];
+  const currentIndex = tabs.indexOf(tabId);
+  if (currentIndex === -1) return;
+
   tabs.forEach(t => {
     const btn = document.getElementById(`tabBtn-${t}`);
     const panel = document.getElementById(`tabContent-${t}`);
     if (btn) {
       if (t === tabId) {
-        btn.classList.add('bg-[#C29B38]', 'text-[#072119]');
-        btn.classList.remove('bg-white/10', 'text-gray-200');
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
       } else {
-        btn.classList.remove('bg-[#C29B38]', 'text-[#072119]');
-        btn.classList.add('bg-white/10', 'text-gray-200');
+        btn.classList.remove('active');
+        btn.setAttribute('aria-selected', 'false');
       }
     }
     if (panel) {
@@ -694,6 +797,111 @@ window.switchClubTab = function(tabId) {
       }
     }
   });
+
+  // Mobile horizontal menu displacement
+  const container = document.getElementById('clubTabsContainer');
+  const activeBtn = document.getElementById(`tabBtn-${tabId}`);
+  if (container && activeBtn) {
+    const containerWidth = container.clientWidth;
+    const maxScroll = container.scrollWidth - containerWidth;
+
+    if (maxScroll > 0) {
+      let targetLeft = 0;
+
+      if (currentIndex === 0) {
+        // Primer tab: alineado al inicio
+        targetLeft = 0;
+      } else if (currentIndex === tabs.length - 1) {
+        // Último tab: alineado al final
+        targetLeft = maxScroll;
+      } else {
+        // Tabs intermedios: centrar el botón activo en pantalla para que tanto
+        // el botón previo (izquierda) como el siguiente (derecha) queden cómodamente visibles y cliqueables
+        const activeCenter = activeBtn.offsetLeft + (activeBtn.offsetWidth / 2);
+        targetLeft = activeCenter - (containerWidth / 2);
+
+        // Garantizar que el botón anterior tenga como mínimo 70px visibles a la izquierda para poder tocarlo
+        const prevTabId = tabs[currentIndex - 1];
+        const prevBtn = document.getElementById(`tabBtn-${prevTabId}`);
+        if (prevBtn) {
+          const prevRight = prevBtn.offsetLeft + prevBtn.offsetWidth;
+          const maxScrollForPrev = prevRight - 70;
+          if (targetLeft > maxScrollForPrev) {
+            targetLeft = maxScrollForPrev;
+          }
+        }
+
+        // Garantizar que el botón siguiente tenga como mínimo 70px visibles a la derecha
+        const nextTabId = tabs[currentIndex + 1];
+        const nextBtn = document.getElementById(`tabBtn-${nextTabId}`);
+        if (nextBtn) {
+          const nextLeft = nextBtn.offsetLeft;
+          const minScrollForNext = nextLeft + 70 - containerWidth;
+          if (targetLeft < minScrollForNext) {
+            targetLeft = minScrollForNext;
+          }
+        }
+
+        targetLeft = Math.max(0, Math.min(maxScroll, targetLeft));
+      }
+
+      smoothScrollClubTabs(container, targetLeft, 320);
+    }
+  }
+
+  // Smooth scroll up to tab header if triggered from bottom panel buttons
+  if (shouldScrollToHeader) {
+    const tabsAnchor = document.getElementById('clubTabsContainer') || document.getElementById('club');
+    if (tabsAnchor) {
+      const offsetTop = tabsAnchor.getBoundingClientRect().top + window.pageYOffset - 90;
+      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+    }
+  }
 };
+
+// Horizontal swipe gesture between club tabs on touch devices
+(function initClubTabSwipe() {
+  const tabs = ['historia', 'comision', 'caps', 'servicios', 'llegar'];
+  let startX = 0;
+  let startY = 0;
+  let isTouching = false;
+
+  const clubSection = document.getElementById('club');
+  if (!clubSection) return;
+
+  clubSection.addEventListener('touchstart', (e) => {
+    if (e.target.closest('#clubTabsContainer') || e.target.closest('input, textarea, select, a, button')) return;
+    const touch = e.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+    isTouching = true;
+  }, { passive: true });
+
+  clubSection.addEventListener('touchend', (e) => {
+    if (!isTouching) return;
+    isTouching = false;
+    const touch = e.changedTouches[0];
+    const diffX = touch.clientX - startX;
+    const diffY = touch.clientY - startY;
+
+    // Detect intentional horizontal swipe (>60px horizontal, 1.5x greater than vertical)
+    if (Math.abs(diffX) > 60 && Math.abs(diffX) > Math.abs(diffY) * 1.5) {
+      const currentActiveBtn = document.querySelector('.club-tab-btn.active');
+      if (!currentActiveBtn) return;
+      const currentId = currentActiveBtn.id.replace('tabBtn-', '');
+      const idx = tabs.indexOf(currentId);
+      if (idx === -1) return;
+
+      if (diffX < 0 && idx < tabs.length - 1) {
+        // Swiped left -> Next tab
+        window.switchClubTab(tabs[idx + 1]);
+      } else if (diffX > 0 && idx > 0) {
+        // Swiped right -> Previous tab
+        window.switchClubTab(tabs[idx - 1]);
+      }
+    }
+  }, { passive: true });
+})();
+
 
 

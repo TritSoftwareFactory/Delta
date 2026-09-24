@@ -40,7 +40,7 @@
   </script>
 
   <!-- Custom Design System Styles -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=20260924_09">
 </head>
 <body class="bg-[#F6F5F0] text-[#131A16] font-body">
 
@@ -801,22 +801,26 @@
       </div>
 
       <!-- Institutional Tabs Control -->
-      <div class="flex items-center justify-start sm:justify-center overflow-x-auto pb-4 gap-2 mb-8 no-scrollbar" role="tablist">
-        <button onclick="switchClubTab('historia')" id="tabBtn-historia" class="club-tab-btn active px-4 py-2.5 rounded-xl font-heading font-bold text-xs uppercase tracking-wider transition-all shrink-0 bg-[#C29B38] text-[#072119]">
-          Historia e Hitos
-        </button>
-        <button onclick="switchClubTab('comision')" id="tabBtn-comision" class="club-tab-btn px-4 py-2.5 rounded-xl font-heading font-bold text-xs uppercase tracking-wider transition-all shrink-0 bg-white/10 text-gray-200 hover:bg-white/20">
-          Comisión Directiva
-        </button>
-        <button onclick="switchClubTab('caps')" id="tabBtn-caps" class="club-tab-btn px-4 py-2.5 rounded-xl font-heading font-bold text-xs uppercase tracking-wider transition-all shrink-0 bg-white/10 text-gray-200 hover:bg-white/20">
-          Espíritu Yacaré & CAPS
-        </button>
-        <button onclick="switchClubTab('servicios')" id="tabBtn-servicios" class="club-tab-btn px-4 py-2.5 rounded-xl font-heading font-bold text-xs uppercase tracking-wider transition-all shrink-0 bg-white/10 text-gray-200 hover:bg-white/20">
-          Servicios (Gimnasio & Boutique)
-        </button>
-        <button onclick="switchClubTab('llegar')" id="tabBtn-llegar" class="club-tab-btn px-4 py-2.5 rounded-xl font-heading font-bold text-xs uppercase tracking-wider transition-all shrink-0 bg-white/10 text-gray-200 hover:bg-white/20">
-          Cómo Llegar al Predio
-        </button>
+      <div class="relative mb-8">
+        <div id="clubTabsContainer" style="scrollbar-width: none; -ms-overflow-style: none;" class="flex items-center justify-start sm:justify-center overflow-x-auto pb-2 gap-2 no-scrollbar" role="tablist">
+          <button onclick="switchClubTab('historia')" id="tabBtn-historia" class="club-tab-btn active px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl font-heading font-bold text-xs uppercase tracking-normal sm:tracking-wider shrink-0">
+            Historia e Hitos
+          </button>
+          <button onclick="switchClubTab('comision')" id="tabBtn-comision" class="club-tab-btn px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl font-heading font-bold text-xs uppercase tracking-normal sm:tracking-wider shrink-0">
+            Comisión Directiva
+          </button>
+          <button onclick="switchClubTab('caps')" id="tabBtn-caps" class="club-tab-btn px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl font-heading font-bold text-xs uppercase tracking-normal sm:tracking-wider shrink-0">
+            Espíritu Yacaré & CAPS
+          </button>
+          <button onclick="switchClubTab('servicios')" id="tabBtn-servicios" class="club-tab-btn px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl font-heading font-bold text-xs uppercase tracking-normal sm:tracking-wider shrink-0">
+            <span class="sm:hidden">Servicios & Boutique</span>
+            <span class="hidden sm:inline">Servicios (Gimnasio & Boutique)</span>
+          </button>
+          <button onclick="switchClubTab('llegar')" id="tabBtn-llegar" class="club-tab-btn px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-xl font-heading font-bold text-xs uppercase tracking-normal sm:tracking-wider shrink-0">
+            <span class="sm:hidden">Cómo Llegar</span>
+            <span class="hidden sm:inline">Cómo Llegar al Predio</span>
+          </button>
+        </div>
       </div>
 
       <!-- Tab Content 1: Historia e Hitos -->
@@ -881,6 +885,14 @@
               <p class="text-xs text-gray-200">Santiago Salado Castro Pumita M18. Octubre: Ascenso a Primera B de URBA. Diciembre: Campeón del Seven del Mercosur.</p>
             </div>
 
+          </div>
+
+          <!-- Tab Navigation Footer -->
+          <div class="mt-8 pt-6 border-t border-white/15 flex items-center justify-end">
+            <button onclick="switchClubTab('comision', true)" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#C92A34] hover:bg-[#A51D25] text-white font-heading font-black text-xs uppercase tracking-wider transition-all shadow-lg shadow-[#C92A34]/25 group">
+              <span>Siguiente: Comisión Directiva</span>
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </button>
           </div>
         </div>
       </div>
@@ -951,6 +963,18 @@
               <span class="text-xs text-gray-300 block mt-0.5">Suplente: Mario Luis Mobrici</span>
             </div>
 
+          </div>
+
+          <!-- Tab Navigation Footer -->
+          <div class="mt-8 pt-6 border-t border-white/15 flex flex-wrap items-center justify-between gap-3">
+            <button onclick="switchClubTab('historia', true)" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-gray-200 font-heading font-bold text-xs uppercase tracking-wider transition-all">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+              <span>Historia e Hitos</span>
+            </button>
+            <button onclick="switchClubTab('caps', true)" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#C92A34] hover:bg-[#A51D25] text-white font-heading font-black text-xs uppercase tracking-wider transition-all shadow-lg shadow-[#C92A34]/25 group ml-auto">
+              <span>Siguiente: Espíritu Yacaré & CAPS</span>
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </button>
           </div>
         </div>
       </div>
@@ -1024,6 +1048,17 @@
             </div>
           </div>
 
+          <!-- Tab Navigation Footer -->
+          <div class="mt-8 pt-6 border-t border-white/15 flex flex-wrap items-center justify-between gap-3">
+            <button onclick="switchClubTab('comision', true)" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-gray-200 font-heading font-bold text-xs uppercase tracking-wider transition-all">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+              <span>Comisión Directiva</span>
+            </button>
+            <button onclick="switchClubTab('servicios', true)" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#C92A34] hover:bg-[#A51D25] text-white font-heading font-black text-xs uppercase tracking-wider transition-all shadow-lg shadow-[#C92A34]/25 group ml-auto">
+              <span>Siguiente: Servicios (Gimnasio & Boutique)</span>
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -1035,7 +1070,7 @@
           <div class="bg-[#0A2D23] rounded-2xl p-6 border border-white/15 shadow-xl flex flex-col justify-between">
             <div>
               <div class="w-10 h-10 rounded-xl bg-[#C29B38]/20 text-[#C29B38] flex items-center justify-center mb-4">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10v4M21 10v4M6 6v12M18 6v12M6 12h12"/></svg>
               </div>
               <h3 class="font-heading font-bold text-lg text-white uppercase mb-2">Gimnasio del Club</h3>
               <p class="text-xs text-gray-300 leading-relaxed mb-4">
@@ -1103,6 +1138,18 @@
           </div>
 
         </div>
+
+        <!-- Tab Navigation Footer -->
+        <div class="mt-8 pt-6 border-t border-white/15 flex flex-wrap items-center justify-between gap-3">
+          <button onclick="switchClubTab('caps', true)" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-gray-200 font-heading font-bold text-xs uppercase tracking-wider transition-all">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+            <span>Espíritu Yacaré & CAPS</span>
+          </button>
+          <button onclick="switchClubTab('llegar', true)" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#C92A34] hover:bg-[#A51D25] text-white font-heading font-black text-xs uppercase tracking-wider transition-all shadow-lg shadow-[#C92A34]/25 group ml-auto">
+            <span>Siguiente: Cómo Llegar al Predio</span>
+            <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
       </div>
 
       <!-- Tab Content 5: Cómo Llegar al Predio -->
@@ -1126,7 +1173,7 @@
 
               <div class="flex flex-wrap items-center gap-3 pt-2">
                 <a href="https://maps.google.com/?q=Delta+Rugby+Club+Rincon+de+Milberg" target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center gap-2 px-4 py-2.5 bg-[#C29B38] hover:bg-[#d6ac42] text-[#072119] font-heading font-black text-xs uppercase tracking-wider rounded-xl shadow transition-transform active:scale-95">
+                   class="inline-flex items-center gap-2 px-4 py-2.5 bg-[#C92A34] hover:bg-[#A51D25] text-white font-heading font-black text-xs uppercase tracking-wider rounded-xl shadow transition-transform active:scale-95">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
                   <span>Abrir en Google Maps</span>
                 </a>
@@ -1160,6 +1207,18 @@
             </div>
 
           </div>
+
+          <!-- Tab Navigation Footer -->
+          <div class="mt-8 pt-6 border-t border-white/15 flex flex-wrap items-center justify-between gap-3">
+            <button onclick="switchClubTab('servicios', true)" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-gray-200 font-heading font-bold text-xs uppercase tracking-wider transition-all">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+              <span>Servicios (Gimnasio & Boutique)</span>
+            </button>
+            <a href="#asociate" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#C8102E] hover:bg-[#a00d24] text-white font-heading font-black text-xs uppercase tracking-wider transition-all shadow-lg shadow-black/20 group ml-auto">
+              <span>Hacete Socio de Delta</span>
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -1172,94 +1231,116 @@
   <section class="py-16 bg-white border-t border-[#D8D4C8]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-[#D8D4C8] gap-4">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 pb-4 border-b border-[#D8D4C8] gap-4">
         <div>
           <h2 class="font-heading font-black text-2xl sm:text-3xl text-[#0E3D2F] tracking-tight uppercase">
             Novedades & Gacetilla del Club
           </h2>
           <p class="text-sm text-gray-700 mt-1">
-            Información deportiva, convocatorias a giras e hitos de infraestructura.
+            Información deportiva oficial, convocatorias a seleccionados e hitos de infraestructura.
           </p>
         </div>
+        <a href="https://www.instagram.com/deltarugbyclub/" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#C92A34] hover:bg-[#A51D25] text-white rounded-lg text-xs font-bold transition-colors shadow-sm self-start sm:self-auto">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          <span>Instagram @deltarugbyclub</span>
+        </a>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
-        <!-- News 1 -->
-        <article class="editorial-card rounded-xl overflow-hidden flex flex-col justify-between shadow-sm">
+        <!-- News 1: Convocatoria URBA -->
+        <article class="editorial-card rounded-xl overflow-hidden flex flex-col justify-between shadow-sm border border-[#D8D4C8] hover:shadow-md transition-shadow">
           <div>
-            <div class="h-48 overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1544698310-74ea9d1c8258?auto=format&fit=crop&w=800&q=80" alt="Plantel Superior Delta RC" class="w-full h-full object-cover">
-              <span class="absolute top-3 left-3 bg-[#0E3D2F] text-white font-semibold text-[11px] px-2.5 py-1 rounded">
-                Rugby Superior
+            <a href="https://www.instagram.com/deltarugbyclub/p/DdH_1GjT2bW/" target="_blank" rel="noopener noreferrer" class="block h-52 overflow-hidden relative group cursor-pointer" title="Ver post en Instagram">
+              <img src="assets/imagenes/novedades/novedad_8.jpg" alt="Vicente Ribas Seleccionado URBA M16" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 left-3 bg-[#C92A34] text-white font-semibold text-[11px] px-2.5 py-1 rounded shadow-sm">
+                Seleccionados URBA
               </span>
-            </div>
+              <span class="absolute bottom-2 right-2 bg-black/60 backdrop-blur-sm text-white text-[10px] font-medium px-2 py-0.5 rounded flex items-center gap-1 group-hover:bg-[#C92A34] transition-colors">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                Instagram
+              </span>
+            </a>
             <div class="p-5">
-              <span class="text-xs text-gray-500">20 de Septiembre, 2026</span>
+              <span class="text-xs text-gray-500 font-medium">10 de Septiembre, 2026</span>
               <h3 class="font-heading font-bold text-lg text-gray-900 mt-1 mb-2 hover:text-[#0E3D2F] transition-colors leading-snug">
-                Gran triunfo del Plantel Superior ante San Fernando en una fecha clave
+                Vicente Ribas convocado al Seleccionado URBA Desarrollo M16
               </h3>
               <p class="text-xs text-gray-600 leading-relaxed">
-                Los Yacarés mostraron solidez defensiva y contundencia en las formaciones fijas para traerse 4 puntos vitales en el torneo de la URBA.
+                Orgullo de nuestra cantera yacaré: el back juvenil fue citado oficialmente por la Unión de Rugby de Buenos Aires para integrar los entrenamientos del representativo provincial.
               </p>
             </div>
           </div>
           <div class="px-5 pb-5 pt-1">
-            <button onclick="showToast('Artículo disponible próximamente en la gacetilla mensual.')" class="text-xs font-bold text-[#0E3D2F] hover:underline">
-              Leer comunicado completo
-            </button>
+            <a href="https://www.instagram.com/deltarugbyclub/p/DdH_1GjT2bW/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-[#C92A34] hover:text-[#A51D25] inline-flex items-center gap-1.5 group/link">
+              <span>Ver publicación en Instagram</span>
+              <svg class="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
           </div>
         </article>
 
-        <!-- News 2 -->
-        <article class="editorial-card rounded-xl overflow-hidden flex flex-col justify-between shadow-sm">
+        <!-- News 2: Obras e Infraestructura -->
+        <article class="editorial-card rounded-xl overflow-hidden flex flex-col justify-between shadow-sm border border-[#D8D4C8] hover:shadow-md transition-shadow">
           <div>
-            <div class="h-48 overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=800&q=80" alt="Iluminación Led Cancha 2" class="w-full h-full object-cover">
-              <span class="absolute top-3 left-3 bg-[#165641] text-white font-semibold text-[11px] px-2.5 py-1 rounded">
+            <a href="https://www.instagram.com/deltarugbyclub/reel/DdortP7TEyU/" target="_blank" rel="noopener noreferrer" class="block h-52 overflow-hidden relative group cursor-pointer" title="Ver reel en Instagram">
+              <img src="assets/imagenes/novedades/novedad_3.jpg" alt="Obras en el predio Delta RC" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 left-3 bg-[#0E3D2F] text-white font-semibold text-[11px] px-2.5 py-1 rounded shadow-sm">
                 Infraestructura
               </span>
-            </div>
+              <span class="absolute bottom-2 right-2 bg-black/60 backdrop-blur-sm text-white text-[10px] font-medium px-2 py-0.5 rounded flex items-center gap-1 group-hover:bg-[#C92A34] transition-colors">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                Instagram Reel
+              </span>
+            </a>
             <div class="p-5">
-              <span class="text-xs text-gray-500">14 de Septiembre, 2026</span>
+              <span class="text-xs text-gray-500 font-medium">23 de Septiembre, 2026</span>
               <h3 class="font-heading font-bold text-lg text-gray-900 mt-1 mb-2 hover:text-[#0E3D2F] transition-colors leading-snug">
-                Obras: Inauguración del nuevo sistema lumínico LED en Cancha 2
+                Obras en la Sede: Nueva platea de hormigón y ampliación social
               </h3>
               <p class="text-xs text-gray-600 leading-relaxed">
-                Completamos la reconversión a iluminación LED de alta potencia para optimizar los entrenamientos nocturnos de juveniles y hockey.
+                Avanzan a paso firme los trabajos en Olivares 168. Se completó el colado de hormigón para el nuevo sector social junto al quincho y canchas, sumando más comodidades a las familias.
               </p>
             </div>
           </div>
           <div class="px-5 pb-5 pt-1">
-            <button onclick="showToast('Artículo disponible próximamente en la gacetilla mensual.')" class="text-xs font-bold text-[#0E3D2F] hover:underline">
-              Leer comunicado completo
-            </button>
+            <a href="https://www.instagram.com/deltarugbyclub/reel/DdortP7TEyU/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-[#C92A34] hover:text-[#A51D25] inline-flex items-center gap-1.5 group/link">
+              <span>Ver video de la obra en Instagram</span>
+              <svg class="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
           </div>
         </article>
 
-        <!-- News 3 -->
-        <article class="editorial-card rounded-xl overflow-hidden flex flex-col justify-between shadow-sm">
+        <!-- News 3: Triunfazo Plantel Superior -->
+        <article class="editorial-card rounded-xl overflow-hidden flex flex-col justify-between shadow-sm border border-[#D8D4C8] hover:shadow-md transition-shadow">
           <div>
-            <div class="h-48 overflow-hidden relative">
-              <img src="https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&w=800&q=80" alt="Gira Juveniles M17" class="w-full h-full object-cover">
-              <span class="absolute top-3 left-3 bg-[#C92A34] text-white font-semibold text-[11px] px-2.5 py-1 rounded">
-                Juveniles
+            <a href="https://www.instagram.com/deltarugbyclub/p/DdNbBYLv4YX/" target="_blank" rel="noopener noreferrer" class="block h-52 overflow-hidden relative group cursor-pointer" title="Ver post en Instagram">
+              <img src="assets/imagenes/platel%20superior%20y%20juveniles/2026-07-04_19-05-42_UTC.jpg" alt="Plantel Superior y Juveniles Delta Rugby Club" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500">
+              <span class="absolute top-3 left-3 bg-[#0E3D2F] text-white font-semibold text-[11px] px-2.5 py-1 rounded shadow-sm">
+                Plantel Superior
               </span>
-            </div>
+              <span class="absolute bottom-2 right-2 bg-black/60 backdrop-blur-sm text-white text-[10px] font-medium px-2 py-0.5 rounded flex items-center gap-1 group-hover:bg-[#C92A34] transition-colors">
+                <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                Instagram
+              </span>
+            </a>
             <div class="p-5">
-              <span class="text-xs text-gray-500">08 de Septiembre, 2026</span>
+              <span class="text-xs text-gray-500 font-medium">12 de Septiembre, 2026</span>
               <h3 class="font-heading font-bold text-lg text-gray-900 mt-1 mb-2 hover:text-[#0E3D2F] transition-colors leading-snug">
-                Inscripción abierta para la Gira Nacional M17 a Mendoza 2026
+                Fecha 21 URBA: Triunfo clave de Primera frente a Vicentinos (26-33)
               </h3>
               <p class="text-xs text-gray-600 leading-relaxed">
-                La camada 2008 prepara su tradicional viaje de fin de año. Información sobre cronograma, costos, autorizaciones y fichas médicas.
+                Jornada triunfal como visitantes con victorias en Primera (26-33), Intermedia (19-66) y Pre Intermedia A (14-39), manteniendo al equipo en los puestos de vanguardia de la URBA.
               </p>
             </div>
           </div>
           <div class="px-5 pb-5 pt-1">
-            <button onclick="showToast('Artículo disponible próximamente en la gacetilla mensual.')" class="text-xs font-bold text-[#0E3D2F] hover:underline">
-              Leer comunicado completo
-            </button>
+            <a href="https://www.instagram.com/deltarugbyclub/p/DdNbBYLv4YX/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-[#C92A34] hover:text-[#A51D25] inline-flex items-center gap-1.5 group/link">
+              <span>Ver resultados en Instagram</span>
+              <svg class="w-3.5 h-3.5 group-hover/link:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
           </div>
         </article>
 
@@ -1937,87 +2018,27 @@
   <!-- =========================================================================
        11. FOOTER INSTITUCIONAL
        ========================================================================= -->
-  <footer class="bg-delta-green-dark text-white pt-16 pb-28 md:pb-12 border-t border-emerald-900/60">
+  <footer class="bg-delta-green-dark text-white pt-14 pb-28 md:pb-12 border-t border-emerald-900/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-emerald-900/50">
-        
-        <!-- Col 1: Club Info -->
-        <div class="lg:col-span-4 space-y-4">
-          <a href="#mainHeader" class="flex items-center gap-3 group brand-logo-link cursor-pointer" title="Volver al inicio">
-            <img src="assets/logo_delta_pro_badge.svg" alt="Delta RC" class="w-12 h-14 group-hover:scale-105 transition-transform">
-            <div>
-              <span class="font-heading font-black text-xl text-white transition-colors">DELTA RUGBY CLUB</span>
-              <p class="text-xs text-delta-gold font-bold">Fundado el 19 de Noviembre de 2009</p>
-            </div>
-          </a>
-          <p class="text-xs text-gray-300 leading-relaxed">
-            Asociación Civil sin fines de lucro afiliada a la Unión de Rugby de Buenos Aires (URBA) y a la Asociación Amateur de Hockey de Buenos Aires (AAHBA).
-          </p>
-          <p class="text-[11px] font-semibold text-emerald-300">
-            • Amistad • Humildad • Compromiso • Respeto •
-          </p>
-        </div>
-
-        <!-- Col 2: Menú Rápido -->
-        <div class="lg:col-span-2 space-y-3">
-          <span class="font-heading font-bold text-sm text-white uppercase tracking-wider block">Deportes</span>
-          <ul class="space-y-2 text-xs text-gray-300">
-            <li><a href="deportes.html?tab=rugby&div=plantel-superior" class="hover:text-emerald-300">Plantel Superior</a></li>
-            <li><a href="deportes.html?tab=rugby&div=juveniles" class="hover:text-emerald-300">Rugby Juvenil</a></li>
-            <li><a href="deportes.html?tab=rugby&div=infantiles" class="hover:text-emerald-300">Rugby Infantil</a></li>
-            <li><a href="deportes.html?tab=hockey" class="hover:text-emerald-300">Hockey Césped</a></li>
-            <li><a href="deportes.html?tab=rugby&div=classic" class="hover:text-emerald-300">Yacaré Classic</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 3: Institucional -->
-        <div class="lg:col-span-2 space-y-3">
-          <span class="font-heading font-bold text-sm text-white uppercase tracking-wider block">Institucional</span>
-          <ul class="space-y-2 text-xs text-gray-300">
-            <li><a href="#club" onclick="switchClubTab('historia')" class="hover:text-emerald-300">Historia e Hitos</a></li>
-            <li><a href="#club" onclick="switchClubTab('comision')" class="hover:text-emerald-300">Comisión Directiva</a></li>
-            <li><a href="#club" onclick="switchClubTab('caps')" class="hover:text-emerald-300">Espíritu Yacaré & CAPS</a></li>
-            <li><a href="#club" onclick="switchClubTab('servicios')" class="hover:text-emerald-300">Gimnasio & Boutique</a></li>
-            <li><a href="#socios" class="hover:text-emerald-300">Sede Virtual & Cuotas</a></li>
-            <li><a href="#fixture" class="hover:text-emerald-300">Match Center URBA</a></li>
-          </ul>
-        </div>
-
-        <!-- Col 4: Sede & Contacto -->
-        <div class="lg:col-span-4 space-y-3">
-          <span class="font-heading font-bold text-sm text-white uppercase tracking-wider block">Sede & Contacto</span>
-          <div class="space-y-2 text-xs text-gray-300">
-            <p class="flex items-start gap-2">
-              <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
-              <span><strong>Olivares 168</strong>, Rincón de Milberg, Tigre, Bs. As.</span>
-            </p>
-            <p class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              <span>Info general: <a href="mailto:info@deltarugbyclub.com" class="text-emerald-300 hover:underline">info@deltarugbyclub.com</a></span>
-            </p>
-            <p class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-              <span>Club / Guardia: <a href="https://wa.me/5491130819442" target="_blank" class="text-emerald-300 hover:underline font-bold">+54 9 11 3081-9442</a></span>
-            </p>
-            <p class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-              <span>Boutique Oficial: <a href="https://wa.me/5491132180456" target="_blank" class="text-emerald-300 hover:underline font-bold">+54 9 11 3218-0456</a></span>
-            </p>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-emerald-900/50">
+        <a href="#mainHeader" class="flex items-center gap-3 group brand-logo-link cursor-pointer text-center md:text-left" title="Subir al inicio">
+          <img src="assets/logo_delta_pro_badge.svg" alt="Delta RC" class="w-10 h-12 group-hover:scale-105 transition-transform">
+          <div>
+            <span class="font-heading font-black text-lg text-white transition-colors">DELTA RUGBY CLUB</span>
+            <p class="text-xs text-gray-300">Olivares 168, Rincón de Milberg, Tigre</p>
           </div>
+        </a>
 
-          <div class="pt-2">
-            <a href="https://maps.google.com/?q=Delta+Rugby+Club+Rincon+de+Milberg" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center gap-2 px-3.5 py-2 bg-emerald-900/60 hover:bg-emerald-800 text-emerald-300 hover:text-white rounded-lg text-xs font-semibold border border-emerald-700/50 transition-colors">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
-              <span>Abrir Navegador GPS</span>
-            </a>
-          </div>
+        <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-gray-300">
+          <a href="#hero" class="hover:text-emerald-300 transition-colors">Inicio</a>
+          <a href="#club" class="hover:text-emerald-300 transition-colors">El Club</a>
+          <a href="#fixture" class="hover:text-emerald-300 transition-colors">Fixture URBA</a>
+          <a href="#socios" class="hover:text-emerald-300 transition-colors">Sede Virtual</a>
         </div>
-
       </div>
 
-      <div class="pt-8 border-t border-emerald-900/60 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-4">
-        <p>&copy; 2026 Delta Rugby Club. Todos los derechos reservados.</p>
+      <div class="pt-6 border-t border-emerald-900/60 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-3 text-center sm:text-left">
+        <p>&copy; 2026 Delta Rugby Club • Afiliado a la URBA y AAHBA</p>
         <a href="https://trit.ar/" target="_blank" rel="noopener noreferrer"
            class="inline-flex items-center gap-2 text-gray-400 hover:text-emerald-300 transition-colors group">
           <span>Desarrollado por</span>
@@ -2048,7 +2069,7 @@
       <!-- Item 2: Deportes -->
       <a href="#deportes" class="mobile-dock-item" aria-label="Deportes">
         <div class="dock-icon">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M2.8 21.2C0.8 12.5 11.5 1.8 21.2 2.8c2 8.7-8.7 19.4-18.4 18.4zM2.8 21.2L21.2 2.8M4 17c2.5-6 7-10.5 13-13M7 20c6-2.5 10.5-7 13-13"/></svg>
         </div>
         <span class="mobile-dock-label" role="tooltip">Deportes</span>
       </a>
@@ -2164,7 +2185,7 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/sports-data.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/sports-data.js?v=20260924_01"></script>
+  <script src="js/app.js?v=20260924_09"></script>
 </body>
 </html>

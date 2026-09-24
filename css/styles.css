@@ -151,11 +151,20 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   will-change: transform, opacity;
 }
 
+body.menu-open .mobile-dock-wrapper,
+body.modal-open .mobile-dock-wrapper {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateX(-50%) translateY(200%) !important;
+}
+
 .mobile-dock-wrapper.dock-hidden {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateX(-50%) translateY(130%);
-  visibility: hidden;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateX(-50%) translateY(200%) !important;
+  visibility: hidden !important;
 }
 
 .mobile-dock-panel {
@@ -336,9 +345,44 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   transition: color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.brand-logo-link:active .font-heading,
-.brand-logo-link.logo-clicked-red .font-heading {
-  color: var(--delta-red) !important;
-  transition: color 0.1s ease;
+/* Scrollbar removal utilities */
+.no-scrollbar::-webkit-scrollbar,
+#clubTabsContainer::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
 }
+
+.no-scrollbar,
+#clubTabsContainer {
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;     /* Firefox */
+}
+
+/* Club Tab Buttons: Instantaneous Zero-Lag Toggle */
+.club-tab-btn {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.club-tab-btn.active {
+  background-color: #C92A34 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px 0 rgba(201, 42, 52, 0.35) !important;
+}
+
+.club-tab-btn:not(.active) {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #E5E7EB !important;
+  box-shadow: none !important;
+}
+
+.club-tab-btn:not(.active):hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+
 

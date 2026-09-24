@@ -40,7 +40,7 @@
   </script>
 
   <!-- Custom Design System Styles -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=20260924_09">
 </head>
 <body class="bg-[#F6F5F0] text-[#131A16] font-body">
 
@@ -129,7 +129,7 @@
       <!-- Sport Switcher Pill Controller -->
       <div class="mt-8 inline-flex p-1 bg-[#051A14] border border-white/20 rounded-lg shadow-lg">
         <button id="tabRugbyBtn" class="px-6 sm:px-8 py-2.5 rounded-md font-heading font-bold text-xs sm:text-sm uppercase tracking-wider transition-all bg-emerald-800 text-white shadow-md flex items-center gap-2">
-          <svg class="w-4 h-4 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <svg class="w-4 h-4 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M2.8 21.2C0.8 12.5 11.5 1.8 21.2 2.8c2 8.7-8.7 19.4-18.4 18.4zM2.8 21.2L21.2 2.8M4 17c2.5-6 7-10.5 13-13M7 20c6-2.5 10.5-7 13-13"/></svg>
           <span>Rugby (URBA)</span>
         </button>
         <button id="tabHockeyBtn" class="px-6 sm:px-8 py-2.5 rounded-md font-heading font-bold text-xs sm:text-sm uppercase tracking-wider transition-all bg-transparent text-gray-300 hover:text-white flex items-center gap-2">
@@ -265,15 +265,18 @@
       </div>
 
       <!-- Featured Category Photo -->
-      <div class="mt-6 rounded-lg overflow-hidden relative h-52 sm:h-64 border border-[#D8D4C8] shadow-inner group">
-        <img src="assets/imagenes/DSC_0374_20.JPG" alt="Rugby Juvenil Delta RC" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
-        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+      <div class="mt-6 rounded-lg overflow-hidden relative h-64 sm:h-80 md:h-[400px] border border-[#D8D4C8] shadow-inner group">
+        <img src="assets/imagenes/rugby_juvenil_m15_m19.jpg" alt="Rugby Juvenil Delta RC M15 a M19" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" style="object-position: center 12%;">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent"></div>
         <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white text-xs">
           <span class="font-bold tracking-wide flex items-center gap-1.5 drop-shadow">
-            <span class="w-2 h-2 rounded-full bg-[#0E3D2F] border border-white"></span>
+            <span class="w-2 h-2 rounded-full bg-delta-red border border-white"></span>
             M15 a M19 • Bloque Competitivo Juvenil
           </span>
-          <span class="hidden sm:inline-block text-white/90 text-[11px] drop-shadow">Formación y Mística en Rincón de Milberg</span>
+          <a href="https://www.instagram.com/p/CS67NYkro03/" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 text-white/90 hover:text-white text-[11px] drop-shadow bg-black/40 hover:bg-black/60 px-2.5 py-1 rounded transition-colors" title="Ver publicación original en Instagram">
+            <svg class="w-3.5 h-3.5 text-delta-red" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span>Instagram @deltarugbyclub</span>
+          </a>
         </div>
       </div>
 
@@ -984,7 +987,7 @@
   <footer class="bg-delta-green-dark text-white pt-14 pb-28 md:pb-12 border-t border-emerald-900/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-emerald-900/50">
-        <a href="#mainHeader" class="flex items-center gap-3 group brand-logo-link cursor-pointer" title="Subir al inicio">
+        <a href="#mainHeader" class="flex items-center gap-3 group brand-logo-link cursor-pointer text-center md:text-left" title="Subir al inicio">
           <img src="assets/logo_delta_pro_badge.svg" alt="Delta RC" class="w-10 h-12 group-hover:scale-105 transition-transform">
           <div>
             <span class="font-heading font-black text-lg text-white transition-colors">DELTA RUGBY CLUB</span>
@@ -992,15 +995,15 @@
           </div>
         </a>
 
-        <div class="flex items-center gap-4 text-xs text-gray-300">
-          <a href="index.html" class="hover:text-emerald-300">Inicio</a>
-          <a href="index.html#club" class="hover:text-emerald-300">El Club</a>
-          <a href="index.html#fixture" class="hover:text-emerald-300">Fixture URBA</a>
-          <a href="index.html#socios" class="hover:text-emerald-300">Sede Virtual</a>
+        <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-gray-300">
+          <a href="index.html" class="hover:text-emerald-300 transition-colors">Inicio</a>
+          <a href="index.html#club" class="hover:text-emerald-300 transition-colors">El Club</a>
+          <a href="index.html#fixture" class="hover:text-emerald-300 transition-colors">Fixture URBA</a>
+          <a href="index.html#socios" class="hover:text-emerald-300 transition-colors">Sede Virtual</a>
         </div>
       </div>
 
-      <div class="pt-6 border-t border-emerald-900/60 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-3">
+      <div class="pt-6 border-t border-emerald-900/60 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-3 text-center sm:text-left">
         <p>&copy; 2026 Delta Rugby Club • Afiliado a la URBA y AAHBA</p>
         <a href="https://trit.ar/" target="_blank" rel="noopener noreferrer"
            class="inline-flex items-center gap-2 text-gray-400 hover:text-emerald-300 transition-colors group">
@@ -1031,7 +1034,7 @@
       <!-- Item 2: Deportes (Activo en deportes.html) -->
       <a href="#deportes-hub" class="mobile-dock-item active" aria-label="Deportes">
         <div class="dock-icon">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M2.8 21.2C0.8 12.5 11.5 1.8 21.2 2.8c2 8.7-8.7 19.4-18.4 18.4zM2.8 21.2L21.2 2.8M4 17c2.5-6 7-10.5 13-13M7 20c6-2.5 10.5-7 13-13"/></svg>
         </div>
         <span class="mobile-dock-label" role="tooltip">Deportes</span>
         <span class="mobile-dock-active-dot"></span>
@@ -1146,8 +1149,8 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/sports-data.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/sports-data.js?v=20260924_01"></script>
+  <script src="js/app.js?v=20260924_09"></script>
   <script>
     // Handle URL query parameters for auto-selecting sport tab
     document.addEventListener('DOMContentLoaded', () => {
