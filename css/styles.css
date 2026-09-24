@@ -52,6 +52,16 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   letter-spacing: -0.015em;
 }
 
+/* Safe area support for iOS notches, Dynamic Island, and navigation bars */
+#mainHeader {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+#mobileDrawer {
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
 /* Clean, tactile focus rings for accessibility without blur glow */
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
   outline: 2px solid var(--delta-gold);
@@ -135,7 +145,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
    ========================================================================= */
 .mobile-dock-wrapper {
   position: fixed;
-  bottom: calc(env(safe-area-inset-bottom, 8px) + 10px);
+  bottom: 20px;
+  bottom: max(calc(env(safe-area-inset-bottom, 0px) + 16px), 20px);
   left: 50%;
   transform: translateX(-50%);
   z-index: 45;
@@ -151,19 +162,30 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   will-change: transform, opacity;
 }
 
+/* Specific enhancement for iOS WebKit / Safari:
+   On iPhone, Safari places the bottom search / address bar by default,
+   which floats above the 34px hardware Home Indicator.
+   Adding safe-area-inset-bottom + 52px positions the dock comfortably at ~86px,
+   floating cleanly ABOVE the Safari address bar with no overlapping or touch conflicts. */
+@supports (-webkit-touch-callout: none) {
+  .mobile-dock-wrapper {
+    bottom: calc(env(safe-area-inset-bottom, 16px) + 52px);
+  }
+}
+
 body.menu-open .mobile-dock-wrapper,
 body.modal-open .mobile-dock-wrapper {
   display: none !important;
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
-  transform: translateX(-50%) translateY(200%) !important;
+  transform: translateX(-50%) translateY(160px) !important;
 }
 
 .mobile-dock-wrapper.dock-hidden {
   opacity: 0 !important;
   pointer-events: none !important;
-  transform: translateX(-50%) translateY(200%) !important;
+  transform: translateX(-50%) translateY(160px) !important;
   visibility: hidden !important;
 }
 
