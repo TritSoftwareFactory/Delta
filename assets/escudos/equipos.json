@@ -1,0 +1,114 @@
+[
+  {
+    "club_id": 53,
+    "name": "Argentino",
+    "filename": "argentino.png",
+    "file_path": "/mnt/storage/Delta/assets/escudos/argentino.png",
+    "size_bytes": 52939,
+    "source_url": "https://urbaimagenes-cddyfadwc8dqcchn.z03.azurefd.net/img/clubs/argentino.png"
+  },
+  {
+    "club_id": 40,
+    "name": "Banco Nacion",
+    "filename": "banconacion.png",
+    "file_path": "/mnt/storage/Delta/assets/escudos/banconacion.png",
+    "size_bytes": 40358,
+    "source_url": "https://urbaimagenes-cddyfadwc8dqcchn.z03.azurefd.net/img/clubs/banconacion.png"
+  },
+  {
+    "club_id": 27,
+    "name": "C.U. de Quilmes",
+    "filename": "cudequilmes.png",
+    "file_path": "/mnt/storage/Delta/assets/escudos/cudequilmes.png",
+    "size_bytes": 129278,
+    "source_url": "https://urbaimagenes-cddyfadwc8dqcchn.z03.azurefd.net/img/clubs/cudequilmes.png"
+  },
+  {
+    "club_id": 33,
+    "name": "Delta",
+    "filename": "delta.png",
+    "file_path": "/mnt/storage/Delta/assets/escudos/delta.png",
+    "size_bytes": 29898,
+    "source_url": "https://urbaimagenes-cddyfadwc8dqcchn.z03.azurefd.net/img/clubs/delta.png"
+  },
+  {
+    "club_id": 37,
+    "name": "Don Bosco",
+    "filename": "donbosco.png",
+    "file_path": "/mnt/storage/Delta/assets/escudos/donbosco.png",
+    "size_bytes": 35218,
+    "source_url": "https://urbaimagenes-cddyfadwc8dqcchn.z03.azurefd.net/img/clubs/donbosco.png"
+  },
+  {
+    "club_id": 28,
+    "name": "Italiano",
+    "filename": "italiano.png",
+    "file_path": "/mnt/storage/Delta/assets/escudos/italiano.png",
+    "size_bytes": 26507,
+    "source_url": "https://urbaimagenes-cddyfadwc8dqcchn.z03.azurefd.net/img/clubs/italiano.png"
+  },
+  {
+    "club_id": 36,
+    "name": "Liceo Militar",
+    "filename": "liceomilitar.png",
+    "file_path": "/mnt/storage/Delta/assets/escudos/liceomilitar.png",
+    "size_bytes": 38943,
+    "source_url": "https://urbaimagenes-cddyfadwc8dqcchn.z03.azurefd.net/img/clubs/liceomilitar.png"
+  },
+  {
+    "club_id": 38,
+    "name": "Liceo Naval",
+    "filename": "liceonaval.png",
+    "file_path": "/mnt/storage/Delta/assets/escudos/liceonaval.png",
+    "size_bytes": 51928,
+    "source_url": "https://urbaimagenes-cddyfadwc8dqcchn.z03.azurefd.net/img/clubs/liceonaval.png"
+  },
+  {
+    "club_id": 34,
+    "name": "Manuel Belgrano",
+    "filename": "manuelbelgrano.png",
+    "file_path": "/mnt/storage/Delta/assets/escudos/manuelbelgrano.png",
+    "size_bytes": 26382,
+    "source_url": "https://urbaimagenes-cddyfadwc8dqcchn.z03.azurefd.net/img/clubs/manuelbelgrano.png"
+  },
+  {
+    "club_id": 39,
+    "name": "Mariano Moreno",
+    "filename": "marianomoreno.png",
+    "file_path": "/mnt/storage/Delta/assets/escudos/marianomoreno.png",
+    "size_bytes": 23315,
+    "source_url": "https://urbaimagenes-cddyfadwc8dqcchn.z03.azurefd.net/img/clubs/marianomoreno.png"
+  },
+  {
+    "club_id": 41,
+    "name": "Monte Grande",
+    "filename": "montegrande.png",
+    "file_path": "/mnt/storage/Delta/assets/escudos/montegrande.png",
+    "size_bytes": 29572,
+    "source_url": "https://urbaimagenes-cddyfadwc8dqcchn.z03.azurefd.net/img/clubs/montegrande.png"
+  },
+  {
+    "club_id": 20,
+    "name": "San Martin",
+    "filename": "sanmartin.png",
+    "file_path": "/mnt/storage/Delta/assets/escudos/sanmartin.png",
+    "size_bytes": 28749,
+    "source_url": "https://urbaimagenes-cddyfadwc8dqcchn.z03.azurefd.net/img/clubs/sanmartin.png"
+  },
+  {
+    "club_id": 21,
+    "name": "San Patricio",
+    "filename": "sanpatricio.png",
+    "file_path": "/mnt/storage/Delta/assets/escudos/sanpatricio.png",
+    "size_bytes": 36695,
+    "source_url": "https://urbaimagenes-cddyfadwc8dqcchn.z03.azurefd.net/img/clubs/sanpatricio.png"
+  },
+  {
+    "club_id": 45,
+    "name": "Vicentinos",
+    "filename": "vicentinos.png",
+    "file_path": "/mnt/storage/Delta/assets/escudos/vicentinos.png",
+    "size_bytes": 32796,
+    "source_url": "https://urbaimagenes-cddyfadwc8dqcchn.z03.azurefd.net/img/clubs/vicentinos.png"
+  }
+]

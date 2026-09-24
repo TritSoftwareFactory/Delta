@@ -1,0 +1,344 @@
+/* ==========================================================================
+   DELTA RUGBY CLUB - BESPOKE EDITORIAL DESIGN SYSTEM
+   Diseño de identidad genuina y dirección de arte deportiva (Anti-Plantilla IA)
+   ========================================================================== */
+
+:root {
+  /* Paleta cromática auténtica: Tinta, Verde Botella, Carmín y Papel */
+  --delta-green-dark: #072119;
+  --delta-green: #0E3D2F;
+  --delta-green-light: #165641;
+  --delta-green-soft: #EBF3EF;
+  --delta-red: #C92A34;
+  --delta-red-dark: #A51D25;
+  --delta-gold: #C29B38;
+  --delta-paper: #F6F5F0;
+  --delta-paper-warm: #EFECE3;
+  --delta-ink: #131A16;
+  --delta-ink-muted: #526058;
+  --delta-border: #D8D4C8;
+
+  --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Base resets & typography */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.22s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--delta-ink);
+  background-color: var(--delta-paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.55;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: -0.015em;
+}
+
+/* Clean, tactile focus rings for accessibility without blur glow */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2px solid var(--delta-gold);
+  outline-offset: 3px;
+}
+
+/* Authentic editorial hero background (photo grounded with rich green canvas) */
+.bg-delta-hero {
+  background: linear-gradient(180deg, rgba(7, 33, 25, 0.93) 0%, rgba(14, 61, 47, 0.88) 100%),
+              url('https://images.unsplash.com/photo-1544698310-74ea9d1c8258?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+}
+
+/* Editorial Scoreboard Frame (replaces generic glassmorphism) */
+.scoreboard-panel {
+  background-color: #08241C;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-top: 3px solid var(--delta-red);
+}
+
+/* Editorial Card (tactile, crisp, grounded paper surface) */
+.editorial-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--delta-border);
+  transition: border-color 0.2s ease;
+}
+.editorial-card:hover {
+  border-color: var(--delta-green);
+}
+
+/* Clean discipline panels (editorial asymmetric layout) */
+.panel-lead {
+  border-left: 4px solid var(--delta-green);
+}
+.panel-infantiles {
+  border-left: 4px solid var(--delta-gold);
+}
+.panel-hockey {
+  border-left: 4px solid var(--delta-red);
+}
+
+/* Matchday indicator - solid & calm instead of constant distracting pulse */
+.matchday-badge {
+  background-color: var(--delta-red);
+  color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* Marquee with subtle pause on touch/hover */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 55s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 55s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover,
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
+
+/* =========================================================================
+   MOBILE DOCK COMPONENT (React Bits pattern adapted for mobile app bar)
+   ========================================================================= */
+.mobile-dock-wrapper {
+  position: fixed;
+  bottom: calc(env(safe-area-inset-bottom, 8px) + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 45;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  pointer-events: none;
+  width: auto;
+  max-width: calc(100vw - 1.5rem);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.22s ease,
+              visibility 0.22s;
+  will-change: transform, opacity;
+}
+
+.mobile-dock-wrapper.dock-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(130%);
+  visibility: hidden;
+}
+
+.mobile-dock-panel {
+  pointer-events: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.5rem;
+  background-color: rgba(7, 33, 25, 0.94);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 9999px;
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.65),
+              0 0 0 1px rgba(22, 86, 65, 0.35);
+  user-select: none;
+  touch-action: pan-x;
+  overflow: visible;
+}
+
+/* Pastilla indicadora deslizante que se mueve fluidamente de un lado al otro (sin rebote ni retraso) */
+.mobile-dock-indicator {
+  position: absolute;
+  top: 0.35rem;
+  left: 0;
+  height: calc(100% - 0.7rem);
+  width: 44px;
+  border-radius: 9999px;
+  background: rgba(14, 61, 47, 0.95);
+  border: 1px solid rgba(194, 155, 56, 0.75);
+  box-shadow: 0 0 16px rgba(194, 155, 56, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  pointer-events: none;
+  z-index: 1;
+  transform: translate3d(0, 0, 0);
+  will-change: transform, width;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              width 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.2s ease,
+              border-color 0.2s ease,
+              box-shadow 0.2s ease,
+              opacity 0.16s ease;
+}
+
+/* Cuando la pastilla se posiciona sobre el botón de Asociate (CTA) */
+.mobile-dock-indicator.is-cta {
+  background: #C92A34;
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 4px 18px rgba(201, 42, 52, 0.6);
+}
+
+.mobile-dock-item {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  background: transparent;
+  border: none;
+  color: #9CA3AF;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  /* El tamaño de los logos se mantiene siempre fijo y estable */
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+.mobile-dock-item:active {
+  opacity: 0.75;
+}
+
+.mobile-dock-item:hover,
+.mobile-dock-item:focus-visible {
+  color: #FFFFFF;
+}
+
+.mobile-dock-item.active {
+  color: #C29B38;
+}
+
+.mobile-dock-item.dock-cta {
+  color: #FFFFFF;
+}
+
+.mobile-dock-item.dock-cta:not(.active) .dock-icon {
+  background: #C92A34;
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(201, 42, 52, 0.45);
+}
+
+.mobile-dock-label {
+  position: absolute;
+  top: -2.3rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  border-radius: 0.375rem;
+  background-color: #072119;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.18rem 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.2s cubic-bezier(0.2, 0, 0.2, 1),
+              transform 0.2s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.mobile-dock-label::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 4px 4px 0 4px;
+  border-style: solid;
+  border-color: #072119 transparent transparent transparent;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mobile-dock-item:hover .mobile-dock-label,
+  .mobile-dock-item:focus-visible .mobile-dock-label {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.mobile-dock-item.label-visible .mobile-dock-label {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.mobile-dock-active-dot {
+  display: none;
+}
+
+/* Document & Form Ledger (Editorial Table / Dossier) */
+.document-ledger-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background-color: #FFFFFF;
+  border: 1px solid var(--delta-border);
+  border-bottom: none;
+  transition: background-color 0.15s ease;
+}
+.document-ledger-row:last-child {
+  border-bottom: 1px solid var(--delta-border);
+}
+.document-ledger-row:hover {
+  background-color: #FAFAF7;
+}
+
+@media (min-width: 768px) {
+  .document-ledger-row {
+    grid-template-columns: 2fr 1fr 1fr auto;
+  }
+}
+
+/* Brand Logo Interaction: Feedback rojo al cliquear que se disuelve al volver al header */
+.brand-logo-link .font-heading {
+  transition: color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brand-logo-link:active .font-heading,
+.brand-logo-link.logo-clicked-red .font-heading {
+  color: var(--delta-red) !important;
+  transition: color 0.1s ease;
+}
+

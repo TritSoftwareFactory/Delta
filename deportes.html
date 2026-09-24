@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deportes | Rugby & Hockey en Delta Rugby Club • URBA</title>
+  <meta name="description" content="Divisiones de Rugby y Hockey en Delta Rugby Club: Plantel Superior, Juveniles M15 a M19, Infantiles, Tiras de Hockey sobre Césped, horarios y cuerpo técnico.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo_delta_pro_badge.svg">
+
+  <!-- Google Fonts: Montserrat (Headings) & Plus Jakarta Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            delta: {
+              green: '#0E3D2F',
+              'green-dark': '#072119',
+              'green-light': '#165641',
+              red: '#C92A34',
+              'red-dark': '#A51D25',
+              gold: '#C29B38'
+            }
+          },
+          fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            body: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Design System Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#F6F5F0] text-[#131A16] font-body">
+
+  <!-- =========================================================================
+       HEADER
+       ========================================================================= -->
+  <header id="mainHeader" class="sticky top-0 z-40 bg-delta-green-dark/95 backdrop-blur-md border-b border-emerald-900/50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-18">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group brand-logo-link" aria-label="Delta Rugby Club - Inicio">
+          <div class="w-9 h-11 sm:w-10 sm:h-12 shrink-0 transition-transform group-hover:scale-105">
+            <img src="assets/logo_delta_pro_badge.svg" alt="Escudo Delta Rugby Club" class="w-full h-full drop-shadow-md">
+          </div>
+          <div class="flex flex-col">
+            <span class="font-heading font-extrabold text-lg sm:text-xl text-white tracking-wide leading-none transition-colors">
+              DELTA
+            </span>
+            <span class="text-[10px] sm:text-[11px] font-bold text-gray-300 uppercase tracking-widest leading-tight mt-0.5">
+              Rugby Club • Tigre
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-1">
+          <a href="index.html" class="px-3.5 py-2 text-sm font-semibold text-gray-200 hover:text-white rounded-lg hover:bg-white/5 transition-colors">
+            Inicio
+          </a>
+          <a href="deportes.html" class="px-3.5 py-2 text-sm font-semibold text-white bg-white/10 rounded-lg">
+            Deportes
+          </a>
+          <a href="index.html#club" class="px-3.5 py-2 text-sm font-semibold text-gray-200 hover:text-white rounded-lg hover:bg-white/5 transition-colors">
+            El Club
+          </a>
+          <a href="index.html#fixture" class="px-3.5 py-2 text-sm font-semibold text-gray-200 hover:text-white rounded-lg hover:bg-white/5 transition-colors">
+            Fixture URBA
+          </a>
+          <a href="index.html#socios" class="px-3.5 py-2 text-sm font-semibold text-gray-200 hover:text-white rounded-lg hover:bg-white/5 transition-colors">
+            Socios
+          </a>
+        </nav>
+
+        <!-- CTA Buttons -->
+        <div class="hidden md:flex items-center gap-4">
+          <a href="index.html#socios" class="text-xs font-semibold text-emerald-300 hover:text-white transition-colors">
+            Sede Virtual
+          </a>
+          <button class="open-register-modal px-4 py-2 text-xs font-extrabold uppercase tracking-wider text-white bg-delta-red hover:bg-delta-red-dark rounded-lg shadow-sm transition-all flex items-center gap-1.5">
+            <span>Asociate</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+        </div>
+
+        <!-- Mobile Trigger -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <button class="open-register-modal px-3 py-1.5 text-xs font-bold text-white bg-delta-red rounded-lg">
+            Asociate
+          </button>
+          <a href="index.html" class="p-2 text-gray-200 hover:text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       SPORTS HERO & DUAL DISCIPLINE CONTROLLER
+       ========================================================================= -->
+  <section id="deportes-hub" class="bg-delta-green-dark text-white py-14 md:py-18 relative overflow-hidden border-b border-emerald-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      
+      <div class="text-xs font-semibold uppercase tracking-wider text-emerald-300 mb-2">
+        Rincón de Milberg • Temporada 2026
+      </div>
+
+      <h1 class="font-heading font-black text-3xl sm:text-5xl text-white tracking-tight uppercase leading-tight">
+        Divisiones Deportivas & Horarios
+      </h1>
+      <p class="text-sm sm:text-base text-emerald-100/90 max-w-2xl mx-auto mt-2 font-normal">
+        Desde infantiles de 5 años hasta veteranos y plantel superior. Seleccioná la disciplina para consultar entrenamientos, cuerpo técnico y requisitos de inscripción.
+      </p>
+
+      <!-- Sport Switcher Pill Controller -->
+      <div class="mt-8 inline-flex p-1 bg-[#051A14] border border-white/20 rounded-lg shadow-lg">
+        <button id="tabRugbyBtn" class="px-6 sm:px-8 py-2.5 rounded-md font-heading font-bold text-xs sm:text-sm uppercase tracking-wider transition-all bg-emerald-800 text-white shadow-md flex items-center gap-2">
+          <svg class="w-4 h-4 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <span>Rugby (URBA)</span>
+        </button>
+        <button id="tabHockeyBtn" class="px-6 sm:px-8 py-2.5 rounded-md font-heading font-bold text-xs sm:text-sm uppercase tracking-wider transition-all bg-transparent text-gray-300 hover:text-white flex items-center gap-2">
+          <svg class="w-4 h-4 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+          <span>Hockey Césped (AAHBA)</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       RUGBY CONTENT TAB
+       ========================================================================= -->
+  <main id="rugbyContent" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    
+    <!-- 1. Plantel Superior -->
+    <div id="plantel-superior" class="editorial-card panel-lead rounded-xl p-6 sm:p-8 shadow-sm">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-[#D8D4C8]">
+        <div>
+          <div class="text-xs font-semibold text-[#0E3D2F]">División Superior URBA</div>
+          <h2 class="font-heading font-black text-2xl sm:text-3xl text-gray-900 uppercase mt-0.5">
+            Plantel Superior de Rugby
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-700 mt-1">
+            Primera División, Intermedia, Pre-Intermedia A y Pre-Intermedia B compitiendo en el torneo oficial de la URBA.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-2.5">
+          <button class="open-register-modal px-4 py-2 bg-[#0E3D2F] hover:bg-[#165641] text-white font-bold text-xs rounded-lg transition-colors" data-sport="rugby">
+            Contactar al Staff
+          </button>
+          <a href="index.html#fixture" class="px-4 py-2 bg-[#EFECE3] hover:bg-gray-200 text-gray-900 font-bold text-xs rounded-lg border border-[#D8D4C8] transition-colors">
+            Ver Fixture URBA
+          </a>
+        </div>
+      </div>
+
+      <!-- Featured Category Photo -->
+      <div class="mt-6 rounded-lg overflow-hidden relative h-56 sm:h-72 border border-[#D8D4C8] shadow-inner group">
+        <img src="assets/imagenes/platel%20superior%20y%20juveniles/2026-07-04_19-05-42_UTC.jpg" alt="Plantel Superior Delta RC" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" style="object-position: center 80%;">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white text-xs">
+          <span class="font-bold tracking-wide flex items-center gap-1.5 drop-shadow">
+            <span class="w-2 h-2 rounded-full bg-[#0E3D2F] border border-white"></span>
+            Primera División & Juveniles Competitivos
+          </span>
+          <span class="hidden sm:inline-block text-white/90 text-[11px] drop-shadow">Delta Rugby Club • Temporada URBA 2026</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+        <!-- Schedule -->
+        <div class="bg-[#FAF9F6] rounded-lg p-5 border border-[#D8D4C8]">
+          <h3 class="font-heading font-bold text-sm text-[#0E3D2F] uppercase block mb-3 border-b border-[#D8D4C8] pb-2 flex items-center gap-2">
+            <svg class="w-4 h-4 text-[#0E3D2F]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Días y Horarios Oficiales</span>
+          </h3>
+          <ul class="space-y-2 text-xs text-gray-700">
+            <li><strong>Entrenamientos:</strong> Lunes, Martes y Jueves de 20:30 a 22:30 hs.</li>
+            <li><strong>Partidos (Sábados):</strong> Preintermedia 12:00 hs • Intermedia 13:45 hs • Primera 15:30 hs.</li>
+            <li><strong>Contacto:</strong> <a href="mailto:capitania@deltarugbyclub.com" class="text-emerald-700 hover:underline font-semibold">capitania@deltarugbyclub.com</a></li>
+          </ul>
+        </div>
+
+        <!-- Staff -->
+        <div class="bg-[#FAF9F6] rounded-lg p-5 border border-[#D8D4C8]">
+          <h3 class="font-heading font-bold text-sm text-[#0E3D2F] uppercase block mb-3 border-b border-[#D8D4C8] pb-2 flex items-center gap-2">
+            <svg class="w-4 h-4 text-[#0E3D2F]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            <span>Cuerpo Técnico 2026</span>
+          </h3>
+          <ul class="space-y-2 text-xs text-gray-700">
+            <li><strong>Head Coach:</strong> Mariano Romanini</li>
+            <li><strong>Entrenadores:</strong> Federico Ruiz & Gastón Pardo</li>
+            <li><strong>Preparador Físico:</strong> Prof. Lucas Benítez</li>
+            <li><strong>Capitán:</strong> Ignacio Lucero</li>
+          </ul>
+        </div>
+
+        <!-- Requisitos -->
+        <div class="bg-[#FAF9F6] rounded-lg p-5 border border-[#D8D4C8]">
+          <h3 class="font-heading font-bold text-sm text-[#0E3D2F] uppercase block mb-3 border-b border-[#D8D4C8] pb-2 flex items-center gap-2">
+            <svg class="w-4 h-4 text-[#0E3D2F]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            <span>Requisitos Oficiales</span>
+          </h3>
+          <p class="text-xs text-gray-600 leading-relaxed mb-3">
+            Ficha médica completa y visada por la URBA con ergometría informada por cardiólogo.
+          </p>
+          <a href="https://urba.org.ar" target="_blank" class="text-xs font-bold text-[#C92A34] hover:underline flex items-center gap-1">
+            <span>Descargar formulario oficial URBA (PDF)</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Division Opponents Quick Strip -->
+      <div class="mt-6 pt-5 border-t border-[#D8D4C8] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <span class="text-xs font-bold text-gray-700">Zona Oficial URBA 2026:</span>
+        <div class="flex items-center flex-wrap gap-2.5">
+          <img src="assets/escudos/sanpatricio.png" alt="San Patricio" title="San Patricio" class="w-6 h-6 object-contain hover:scale-110 transition-transform">
+          <img src="assets/escudos/marianomoreno.png" alt="Mariano Moreno" title="Mariano Moreno" class="w-6 h-6 object-contain hover:scale-110 transition-transform">
+          <img src="assets/escudos/banconacion.png" alt="Banco Nación" title="Banco Nación" class="w-6 h-6 object-contain hover:scale-110 transition-transform">
+          <img src="assets/escudos/cudequilmes.png" alt="C.U. de Quilmes" title="C.U. de Quilmes" class="w-6 h-6 object-contain hover:scale-110 transition-transform">
+          <img src="assets/escudos/sanmartin.png" alt="San Martín" title="San Martín" class="w-6 h-6 object-contain hover:scale-110 transition-transform">
+          <img src="assets/escudos/manuelbelgrano.png" alt="Manuel Belgrano" title="Manuel Belgrano" class="w-6 h-6 object-contain hover:scale-110 transition-transform">
+          <img src="assets/escudos/italiano.png" alt="Italiano" title="Italiano" class="w-6 h-6 object-contain hover:scale-110 transition-transform">
+          <img src="assets/escudos/liceonaval.png" alt="Liceo Naval" title="Liceo Naval" class="w-6 h-6 object-contain hover:scale-110 transition-transform">
+          <img src="assets/escudos/liceomilitar.png" alt="Liceo Militar" title="Liceo Militar" class="w-6 h-6 object-contain hover:scale-110 transition-transform">
+          <img src="assets/escudos/donbosco.png" alt="Don Bosco" title="Don Bosco" class="w-6 h-6 object-contain hover:scale-110 transition-transform">
+          <img src="assets/escudos/argentino.png" alt="Argentino" title="Argentino" class="w-6 h-6 object-contain hover:scale-110 transition-transform">
+          <img src="assets/escudos/montegrande.png" alt="Monte Grande" title="Monte Grande" class="w-6 h-6 object-contain hover:scale-110 transition-transform">
+          <img src="assets/escudos/vicentinos.png" alt="Vicentinos" title="Vicentinos" class="w-6 h-6 object-contain hover:scale-110 transition-transform">
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Juveniles (M15 a M19) -->
+    <div id="juveniles" class="editorial-card rounded-xl p-6 sm:p-8 shadow-sm">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-[#D8D4C8]">
+        <div>
+          <div class="text-xs font-semibold text-[#0E3D2F]">Formación Competitiva</div>
+          <h2 class="font-heading font-black text-2xl sm:text-3xl text-gray-900 uppercase mt-0.5">
+            Rugby Juvenil (M15 a M19)
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-700 mt-1">
+            Chicos de 15 a 19 años. Formamos atletas y personas comprometidas con el espíritu de equipo y el juego limpio.
+          </p>
+        </div>
+
+        <button class="open-register-modal px-4 py-2 bg-[#C92A34] hover:bg-[#A51D25] text-white font-bold text-xs rounded-lg transition-colors self-start lg:self-auto" data-sport="rugby">
+          Sumarse a Juveniles
+        </button>
+      </div>
+
+      <!-- Featured Category Photo -->
+      <div class="mt-6 rounded-lg overflow-hidden relative h-52 sm:h-64 border border-[#D8D4C8] shadow-inner group">
+        <img src="assets/imagenes/DSC_0374_20.JPG" alt="Rugby Juvenil Delta RC" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white text-xs">
+          <span class="font-bold tracking-wide flex items-center gap-1.5 drop-shadow">
+            <span class="w-2 h-2 rounded-full bg-[#0E3D2F] border border-white"></span>
+            M15 a M19 • Bloque Competitivo Juvenil
+          </span>
+          <span class="hidden sm:inline-block text-white/90 text-[11px] drop-shadow">Formación y Mística en Rincón de Milberg</span>
+        </div>
+      </div>
+
+      <!-- Divisions Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-6">
+        
+        <div class="p-5 rounded-lg bg-[#FAF9F6] border border-[#D8D4C8]">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-heading font-black text-xl text-[#0E3D2F]">M19</span>
+            <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">Clase 2007/06</span>
+          </div>
+          <p class="text-xs text-gray-600 mb-3">La antesala del Plantel Superior con alta intensidad física.</p>
+          <div class="text-xs space-y-1 text-gray-700">
+            <p><strong>Entrenamiento:</strong> Mar y Jue 19:30 hs</p>
+            <p><strong>Partidos:</strong> Domingos 13:00 hs</p>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-lg bg-[#FAF9F6] border border-[#D8D4C8]">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-heading font-black text-xl text-[#0E3D2F]">M17</span>
+            <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">Clase 2008</span>
+          </div>
+          <p class="text-xs text-gray-600 mb-3">Consolidación técnico-táctica y tradicional gira nacional.</p>
+          <div class="text-xs space-y-1 text-gray-700">
+            <p><strong>Entrenamiento:</strong> Mar y Jue 19:30 hs</p>
+            <p><strong>Partidos:</strong> Domingos 11:30 hs</p>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-lg bg-[#FAF9F6] border border-[#D8D4C8]">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-heading font-black text-xl text-[#0E3D2F]">M16</span>
+            <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">Clase 2009</span>
+          </div>
+          <p class="text-xs text-gray-600 mb-3">Crecimiento en toma de decisiones y acondicionamiento en gimnasio.</p>
+          <div class="text-xs space-y-1 text-gray-700">
+            <p><strong>Entrenamiento:</strong> Mar y Jue 19:00 hs</p>
+            <p><strong>Partidos:</strong> Domingos 10:00 hs</p>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-lg bg-[#FAF9F6] border border-[#D8D4C8]">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-heading font-black text-xl text-[#0E3D2F]">M15</span>
+            <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">Clase 2010</span>
+          </div>
+          <p class="text-xs text-gray-600 mb-3">Paso clave de infantiles a cancha reglamentaria de 15 jugadores.</p>
+          <div class="text-xs space-y-1 text-gray-700">
+            <p><strong>Entrenamiento:</strong> Mar y Jue 19:00 hs</p>
+            <p><strong>Partidos:</strong> Domingos 09:30 hs</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Juveniles Summary Note -->
+      <div class="mt-5 pt-3 border-t border-[#D8D4C8] flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-gray-600">
+        <span><strong>Horarios bloque juvenil:</strong> Martes y Jueves de 18:30 a 20:30 hs • Partidos oficiales domingos por la mañana.</span>
+        <span>Contacto división: <a href="mailto:juveniles@deltarugbyclub.com" class="text-[#0E3D2F] font-bold hover:underline">juveniles@deltarugbyclub.com</a></span>
+      </div>
+    </div>
+
+    <!-- 3. Infantiles & Escuelita (M6 a M14) -->
+    <div id="infantiles" class="editorial-card panel-infantiles rounded-xl p-6 sm:p-8 shadow-sm">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-[#D8D4C8]">
+        <div>
+          <div class="text-xs font-semibold text-[#C29B38]">El Semillero del Club</div>
+          <h2 class="font-heading font-black text-2xl sm:text-3xl text-gray-900 uppercase mt-0.5">
+            Rugby Infantil & Escuelita (M6 a M14)
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-700 mt-1">
+            El lugar donde nacen las amistades más profundas. Aprender jugando sin presión competitiva, con el foco en la motricidad y el respeto.
+          </p>
+        </div>
+
+        <button class="open-register-modal px-4 py-2 bg-[#0E3D2F] hover:bg-[#165641] text-white font-bold text-xs rounded-lg transition-colors" data-sport="rugby">
+          Prueba Sin Cargo en Infantiles
+        </button>
+      </div>
+
+      <!-- Featured Category Photo -->
+      <div class="mt-6 rounded-lg overflow-hidden relative h-56 sm:h-72 border border-[#D8D4C8] shadow-inner group">
+        <img src="assets/imagenes/infantiles/2026-08-07_16-05-26_UTC_1.jpg" alt="Rugby Infantil Delta RC" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" style="object-position: center 20%;">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white text-xs">
+          <span class="font-bold tracking-wide flex items-center gap-1.5 drop-shadow">
+            <span class="w-2 h-2 rounded-full bg-[#C29B38] border border-white"></span>
+            Semillero Yacaré • M6 a M14
+          </span>
+          <span class="hidden sm:inline-block text-white/90 text-[11px] drop-shadow">El semillero y la familia de Delta RC</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+        <div class="p-5 rounded-lg bg-[#FAF9F6] border border-[#D8D4C8]">
+          <h3 class="font-heading font-bold text-base text-[#0E3D2F] mb-2">Escuelita (M6 a M9)</h3>
+          <p class="text-xs text-gray-600 mb-3">Para chicos de 5 a 9 años. Juegos recreativos, destrezas con pelota y desarrollo motriz en un ambiente sumamente familiar.</p>
+          <p class="text-xs text-gray-800 font-semibold">Horario: Sábados 10:00 a 11:30 hs</p>
+        </div>
+
+        <div class="p-5 rounded-lg bg-[#FAF9F6] border border-[#D8D4C8]">
+          <h3 class="font-heading font-bold text-base text-[#0E3D2F] mb-2">M10 a M12</h3>
+          <p class="text-xs text-gray-600 mb-3">Enseñanza guiada del tackle seguro, fundamentos de pase y carreras en apoyo, con encuentros de sábado con clubes de URBA.</p>
+          <p class="text-xs text-gray-800 font-semibold">Horario: Mié 18:30 a 20:00 hs y Sáb 10:00 hs</p>
+        </div>
+
+        <div class="p-5 rounded-lg bg-[#FAF9F6] border border-[#D8D4C8]">
+          <h3 class="font-heading font-bold text-base text-[#0E3D2F] mb-2">M13 y M14</h3>
+          <p class="text-xs text-gray-600 mb-3">Transición hacia el rugby formal, line-out, scrum ordenado sin empuje y juego colectivo. Cierre con giras de camaradería.</p>
+          <p class="text-xs text-gray-800 font-semibold">Horario: Mié 18:00 a 20:00 hs y Sáb 10:00 hs</p>
+        </div>
+      </div>
+
+      <!-- Infantiles Summary Note -->
+      <div class="mt-5 pt-3 border-t border-[#D8D4C8] flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-gray-600">
+        <span><strong>Entrenamientos generales Infantiles:</strong> Miércoles (M12 a M14 18:00 hs / demás categorías 18:30 a 20:00 hs) y Sábados 10:00 a 12:00 hs (entrenamientos o encuentros URBA).</span>
+        <span>Contacto división: <a href="mailto:infantiles@deltarugbyclub.com" class="text-[#0E3D2F] font-bold hover:underline">infantiles@deltarugbyclub.com</a></span>
+      </div>
+    </div>
+
+    <!-- 4. Classic & Femenino -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Classic -->
+      <div id="classic" class="editorial-card rounded-xl p-6 sm:p-8 shadow-sm">
+        <div class="text-xs font-semibold text-[#C29B38]">Veteranos (+35)</div>
+        <h3 class="font-heading font-black text-2xl text-gray-900 uppercase mt-0.5 mb-2">
+          Yacaré Classic
+        </h3>
+        <p class="text-xs text-gray-600 leading-relaxed mb-4">
+          El rugby como pretexto para verse cada semana, divertirse y compartir el asado en el quincho. Participamos en encuentros y giras de veteranos de todo el país.
+        </p>
+        <div class="p-4 rounded-lg bg-[#FAF9F6] border border-[#D8D4C8] text-xs space-y-1">
+          <p><strong>Entrenamiento:</strong> Miércoles 20:30 hs (Cancha 2)</p>
+          <p><strong>Tercer Tiempo:</strong> Quincho social desde las 22:00 hs</p>
+        </div>
+      </div>
+
+      <!-- Femenino -->
+      <div id="femenino" class="editorial-card rounded-xl p-6 sm:p-8 shadow-sm">
+        <div class="text-xs font-semibold text-[#C92A34]">En Crecimiento</div>
+        <h3 class="font-heading font-black text-2xl text-gray-900 uppercase mt-0.5 mb-2">
+          Rugby Femenino
+        </h3>
+        <p class="text-xs text-gray-600 leading-relaxed mb-4">
+          Modalidades Seven y Ten participando en los certámenes oficiales de la URBA. Un grupo con enorme empuje y valores de club.
+        </p>
+        <div class="p-4 rounded-lg bg-[#FAF9F6] border border-[#D8D4C8] text-xs space-y-1">
+          <p><strong>Entrenamientos:</strong> Lunes y Miércoles 19:30 a 21:00 hs</p>
+          <p><strong>Requisitos:</strong> Desde los 14 años, con o sin experiencia previa</p>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- =========================================================================
+       HOCKEY CONTENT TAB
+       ========================================================================= -->
+  <main id="hockeyContent" class="hidden py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    
+    <!-- 1. Tira A -->
+    <div id="hockey-tira-a" class="editorial-card panel-hockey rounded-xl p-6 sm:p-8 shadow-sm">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-[#D8D4C8]">
+        <div>
+          <div class="text-xs font-semibold text-[#C92A34]">Torneo Oficial AAHBA • Línea Competitiva</div>
+          <h2 class="font-heading font-black text-2xl sm:text-3xl text-gray-900 uppercase mt-0.5">
+            Hockey Tira A
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-700 mt-1">
+            Primera División, Intermedia, Quinta, Sexta y Séptima compitiendo en la Asociación Amateur de Hockey de Buenos Aires.
+          </p>
+        </div>
+
+        <button class="open-register-modal px-4 py-2 bg-[#C92A34] hover:bg-[#A51D25] text-white font-bold text-xs rounded-lg transition-colors" data-sport="hockey">
+          Sumarse a Hockey
+        </button>
+      </div>
+
+      <!-- Featured Category Photo -->
+      <div class="mt-6 rounded-lg overflow-hidden relative h-56 sm:h-72 border border-[#D8D4C8] shadow-inner group">
+        <img src="assets/imagenes/Hockey/2021-10-05_12-39-12_UTC.jpg" alt="Hockey sobre Césped Delta RC" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white text-xs">
+          <span class="font-bold tracking-wide flex items-center gap-1.5 drop-shadow">
+            <span class="w-2 h-2 rounded-full bg-[#C92A34] border border-white"></span>
+            Línea Competitiva AAHBA & Sintético Propio
+          </span>
+          <span class="hidden sm:inline-block text-white/90 text-[11px] drop-shadow">Hockey Femenino Delta RC</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+        <div class="bg-[#FAF9F6] rounded-lg p-5 border border-[#D8D4C8]">
+          <h3 class="font-heading font-bold text-sm text-[#0E3D2F] uppercase block mb-3 border-b border-[#D8D4C8] pb-2">Días y Horarios</h3>
+          <ul class="space-y-2 text-xs text-gray-700">
+            <li><strong>Martes:</strong> 19:30 a 22:00 hs (Cancha Sintética Oficial)</li>
+            <li><strong>Jueves:</strong> 19:30 a 22:00 hs (Táctico & Físico)</li>
+            <li><strong>Sábados:</strong> Jornada de Partido Oficial AAHBA</li>
+          </ul>
+        </div>
+
+        <div class="bg-[#FAF9F6] rounded-lg p-5 border border-[#D8D4C8]">
+          <h3 class="font-heading font-bold text-sm text-[#0E3D2F] uppercase block mb-3 border-b border-[#D8D4C8] pb-2">Cuerpo Técnico</h3>
+          <ul class="space-y-2 text-xs text-gray-700">
+            <li><strong>Coordinador General:</strong> Diego Álvarez</li>
+            <li><strong>Preparadora Física:</strong> Prof. Mariana Costa</li>
+            <li><strong>Entrenadores de Tira:</strong> Staff capacitado AAHBA</li>
+          </ul>
+        </div>
+
+        <div class="bg-[#FAF9F6] rounded-lg p-5 border border-[#D8D4C8]">
+          <h3 class="font-heading font-bold text-sm text-[#0E3D2F] uppercase block mb-3 border-b border-[#D8D4C8] pb-2">Instalaciones</h3>
+          <p class="text-xs text-gray-600 leading-relaxed mb-3">
+            Cancha reglamentaria de césped sintético con riego e iluminación nocturna LED en nuestro predio de Rincón de Milberg.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Tira B & Menores -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Tira B -->
+      <div id="hockey-tira-b" class="editorial-card rounded-xl p-6 sm:p-8 shadow-sm">
+        <div class="text-xs font-semibold text-[#0E3D2F]">Proyección Deportiva</div>
+        <h3 class="font-heading font-black text-2xl text-gray-900 uppercase mt-0.5 mb-2">
+          Hockey Tira B
+        </h3>
+        <p class="text-xs text-gray-600 leading-relaxed mb-4">
+          Una línea diseñada para brindar rodaje, crecimiento técnico y competencia a todas nuestras jugadoras federadas.
+        </p>
+        <div class="p-4 rounded-lg bg-[#FAF9F6] border border-[#D8D4C8] text-xs space-y-1">
+          <p><strong>Entrenamientos:</strong> Miércoles y Viernes 19:00 a 21:30 hs</p>
+          <p><strong>Sábados:</strong> Jornada de Torneo Oficial</p>
+        </div>
+      </div>
+
+      <!-- Menores & Escuelita -->
+      <div id="hockey-menores" class="editorial-card rounded-xl p-6 sm:p-8 shadow-sm">
+        <div class="text-xs font-semibold text-[#C29B38]">Formativo & Semillero</div>
+        <h3 class="font-heading font-black text-2xl text-gray-900 uppercase mt-0.5 mb-2">
+          Infantiles & Escuelita de Hockey
+        </h3>
+        <p class="text-xs text-gray-600 leading-relaxed mb-4">
+          Octava, Novena y Décima División (desde los 5 años). Iniciación lúdica con stick, bocha y valores de compañerismo.
+        </p>
+        <div class="p-4 rounded-lg bg-[#FAF9F6] border border-[#D8D4C8] text-xs space-y-1">
+          <p><strong>Entrenamientos:</strong> Martes y Jueves 17:45 a 19:15 hs</p>
+          <p><strong>Sábados:</strong> Encuentros y amistosos formativos (09:00 hs)</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 3. Mamis Hockey / Cuarta -->
+    <div id="hockey-cuarta" class="editorial-card rounded-xl p-6 sm:p-8 shadow-sm">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-[#D8D4C8]">
+        <div>
+          <div class="text-xs font-semibold text-[#C29B38]">Veteranas & Mamis (+35)</div>
+          <h3 class="font-heading font-black text-2xl text-gray-900 uppercase mt-0.5 mb-2">
+            Cuarta Categoría Hockey
+          </h3>
+          <p class="text-xs text-gray-600 leading-relaxed max-w-2xl">
+            Para socias que quieren seguir jugando al hockey, entrenar en equipo, competir con amigas y disfrutar de las actividades del club.
+          </p>
+        </div>
+        <button class="open-register-modal px-4 py-2 bg-[#C92A34] hover:bg-[#A51D25] text-white font-bold text-xs rounded-lg transition-colors self-start lg:self-auto" data-sport="hockey">
+          Inscribirme en Cuarta
+        </button>
+      </div>
+      <div class="mt-4 p-4 rounded-lg bg-[#FAF9F6] border border-[#D8D4C8] text-xs inline-block">
+        <p><strong>Días de entrenamiento:</strong> Lunes y Miércoles 20:00 a 21:30 hs (Cancha Sintética Oficial)</p>
+      </div>
+
+      <!-- Hockey Schedules Breakdown Table Strip -->
+      <div class="mt-6 pt-4 border-t border-[#D8D4C8] space-y-2">
+        <span class="text-xs font-bold text-[#0E3D2F] uppercase tracking-wide block">Grilla de Entrenamientos por División (AAHBA):</span>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs text-gray-700">
+          <div class="p-3 bg-[#FAF9F6] rounded-lg border border-[#D8D4C8]">
+            <strong>Quinta y Sexta:</strong>
+            <p class="text-gray-600 mt-0.5">Martes y Jueves 18:00 a 20:15 hs.</p>
+          </div>
+          <div class="p-3 bg-[#FAF9F6] rounded-lg border border-[#D8D4C8]">
+            <strong>Séptima y Octava:</strong>
+            <p class="text-gray-600 mt-0.5">Lun y Mié / Mar y Jue 16:50 a 18:15 hs.</p>
+          </div>
+          <div class="p-3 bg-[#FAF9F6] rounded-lg border border-[#D8D4C8]">
+            <strong>Novena y Décima:</strong>
+            <p class="text-gray-600 mt-0.5">Lun y Jue 16:50 hs • Sábados 10:00 hs.</p>
+          </div>
+          <div class="p-3 bg-[#FAF9F6] rounded-lg border border-[#D8D4C8]">
+            <strong>Escuelita & Pre-décima:</strong>
+            <p class="text-gray-600 mt-0.5">Sábados 10:00 a 12:00 hs.</p>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 text-xs text-gray-600">
+          <span>Partidos oficiales AAHBA los días sábados en condición de local (sintético propio) o visitante.</span>
+          <span>Contacto Hockey: <a href="mailto:hockey@deltarugbyclub.com" class="text-[#0E3D2F] font-bold hover:underline">hockey@deltarugbyclub.com</a></span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- =========================================================================
+       CENTRAL DOWNLOADS & MEDICAL FORMS (EDITORIAL DOCUMENT LEDGER)
+       ========================================================================= -->
+  <section class="py-16 bg-[#EFECE3] border-t border-[#D8D4C8]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-[#D8D4C8] gap-4">
+        <div>
+          <h2 class="font-heading font-black text-2xl sm:text-3xl text-[#0E3D2F] tracking-tight uppercase">
+            Mesa de Formularios & Documentación Oficial
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-700 mt-1">
+            Formularios reglamentarios requeridos por la URBA y la AAHBA para participar en competencias y entrenamientos.
+          </p>
+        </div>
+        <span class="text-xs font-semibold text-gray-500">
+          Actualizado Temporada 2026
+        </span>
+      </div>
+
+      <!-- Document Ledger Table -->
+      <div class="border border-[#D8D4C8] rounded-xl overflow-hidden shadow-sm">
+        
+        <!-- Ledger Header (Desktop) -->
+        <div class="hidden md:grid grid-cols-12 gap-4 px-6 py-3 bg-[#E5E1D5] border-b border-[#D8D4C8] text-xs font-bold text-gray-700 uppercase tracking-wider">
+          <div class="col-span-5">Documento / Trámite</div>
+          <div class="col-span-3">Organismo & Disciplina</div>
+          <div class="col-span-2">Vigencia</div>
+          <div class="col-span-2 text-right">Descarga Directa</div>
+        </div>
+
+        <!-- Item 1: URBA Ficha Médica -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 px-6 py-4 bg-white border-b border-[#D8D4C8] items-center hover:bg-[#FAF9F6] transition-colors">
+          <div class="md:col-span-5">
+            <span class="font-heading font-bold text-sm text-gray-900 block">Ficha Médica y Apto Físico URBA</span>
+            <span class="text-xs text-gray-600">Evaluación cardiológica completa con ergometría informada por cardiólogo matriculado.</span>
+          </div>
+          <div class="md:col-span-3">
+            <span class="text-xs font-semibold text-[#0E3D2F] bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">URBA • Rugby</span>
+          </div>
+          <div class="md:col-span-2 text-xs text-gray-700">
+            Temporada 2026
+          </div>
+          <div class="md:col-span-2 md:text-right">
+            <a href="https://urba.org.ar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#0E3D2F] hover:bg-[#165641] text-white text-xs font-bold rounded-lg transition-colors">
+              <span>Descargar PDF</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Item 2: AAHBA Apto Médico -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 px-6 py-4 bg-white border-b border-[#D8D4C8] items-center hover:bg-[#FAF9F6] transition-colors">
+          <div class="md:col-span-5">
+            <span class="font-heading font-bold text-sm text-gray-900 block">Apto Médico Oficial AAHBA</span>
+            <span class="text-xs text-gray-600">Certificado oficial de salud clínico y bucodental para jugadoras de hockey federadas.</span>
+          </div>
+          <div class="md:col-span-3">
+            <span class="text-xs font-semibold text-[#C92A34] bg-red-50 border border-red-200 px-2 py-0.5 rounded">AAHBA • Hockey</span>
+          </div>
+          <div class="md:col-span-2 text-xs text-gray-700">
+            Temporada 2026
+          </div>
+          <div class="md:col-span-2 md:text-right">
+            <a href="https://cahockey.org.ar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#0E3D2F] hover:bg-[#165641] text-white text-xs font-bold rounded-lg transition-colors">
+              <span>Descargar PDF</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Item 3: Protocolo Rugby Seguro -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 px-6 py-4 bg-white border-b border-[#D8D4C8] items-center hover:bg-[#FAF9F6] transition-colors">
+          <div class="md:col-span-5">
+            <span class="font-heading font-bold text-sm text-gray-900 block">Protocolo Rugby Seguro & Conmoción</span>
+            <span class="text-xs text-gray-600">Guía médica World Rugby: reconocimiento de síntomas, protección bucal y fases de retorno.</span>
+          </div>
+          <div class="md:col-span-3">
+            <span class="text-xs font-semibold text-gray-800 bg-gray-100 border border-gray-300 px-2 py-0.5 rounded">URBA & World Rugby</span>
+          </div>
+          <div class="md:col-span-2 text-xs text-gray-700">
+            Permanente
+          </div>
+          <div class="md:col-span-2 md:text-right">
+            <button onclick="showToast('Protocolo disponible en secretaría y portal de descargas.')" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#FAF9F6] hover:bg-gray-100 text-gray-900 text-xs font-bold rounded-lg border border-[#D8D4C8] transition-colors">
+              <span>Ver Protocolo</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Item 4: Reglamento del Club -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4 px-6 py-4 bg-white items-center hover:bg-[#FAF9F6] transition-colors">
+          <div class="md:col-span-5">
+            <span class="font-heading font-bold text-sm text-gray-900 block">Reglamento de Convivencia y Sede</span>
+            <span class="text-xs text-gray-600">Normativa para el uso responsable de quinchos, parrillas, vestuarios y estacionamiento.</span>
+          </div>
+          <div class="md:col-span-3">
+            <span class="text-xs font-semibold text-[#C29B38] bg-amber-50 border border-amber-200 px-2 py-0.5 rounded">Delta Rugby Club</span>
+          </div>
+          <div class="md:col-span-2 text-xs text-gray-700">
+            Estatuto Social
+          </div>
+          <div class="md:col-span-2 md:text-right">
+            <button onclick="showToast('Reglamento disponible en secretaría.')" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-[#FAF9F6] hover:bg-gray-100 text-gray-900 text-xs font-bold rounded-lg border border-[#D8D4C8] transition-colors">
+              <span>Consultar Normas</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SPONSORS & AUSPICIANTES MARQUEE STRIP
+       ========================================================================= -->
+  <section class="py-10 bg-[#F6F5F0] border-t border-[#D8D4C8] overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-delta-red"></span>
+        <span class="text-xs font-bold text-gray-700 uppercase tracking-wider">Auspiciantes Oficiales de Delta Rugby Club</span>
+      </div>
+      <span class="text-xs font-bold text-[#0E3D2F]">
+        Temporada Oficial URBA
+      </span>
+    </div>
+
+    <!-- Infinite Scrolling Marquee -->
+    <div class="relative w-full overflow-hidden flex items-center">
+      <div class="animate-marquee flex items-center gap-4">
+        <div title="ABConsulting" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/AB_Consulting.jpeg" alt="ABConsulting" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </div>
+        <a href="http://admdelnorte.com.ar/" target="_blank" rel="noopener noreferrer" title="Administracion del norte - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Administracion_del_Norte.jpeg" alt="Administracion del norte" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <div title="Agrogranadera" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Agrogranadera.jpeg" alt="Agrogranadera" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </div>
+        <a href="https://www.albanopino.com/" target="_blank" rel="noopener noreferrer" title="Albano Pino - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Albano_Pino.png" alt="Albano Pino" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://americanmatrix.com.ar/" target="_blank" rel="noopener noreferrer" title="American Matrix - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/American_Matrix.jpeg" alt="American Matrix" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://aredesasociados.com.ar/" target="_blank" rel="noopener noreferrer" title="Aredes Asociados - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Aredes_Asociados.jpeg" alt="Aredes Asociados" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://grupobonprix.com.ar/" target="_blank" rel="noopener noreferrer" title="Bonprix - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Bonprix.jpeg" alt="Bonprix" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.boston.com.ar/" target="_blank" rel="noopener noreferrer" title="Boston Seguros - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Boston_Seguros.png" alt="Boston Seguros" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://burger54.com.ar/" target="_blank" rel="noopener noreferrer" title="Burguer 54 - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Burger_54.png" alt="Burguer 54" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <div title="Carnes San Cayentano" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Carnes_San_Cayetano.jpeg" alt="Carnes San Cayentano" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </div>
+        <a href="https://www.fabulinusberni.com/primaria/index.php" target="_blank" rel="noopener noreferrer" title="Colegio Verni - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Fabulinus_Colegio_Berni.jpeg" alt="Colegio Verni" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="http://www.conejo-negro.com/" target="_blank" rel="noopener noreferrer" title="Conejo Negro - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Conejo_Negro.jpeg" alt="Conejo Negro" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.crematorioprivado.com.ar/" target="_blank" rel="noopener noreferrer" title="Crematorio San isidro - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Crematorio_San_Isidro.png" alt="Crematorio San isidro" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="http://www.decide.com.ar/" target="_blank" rel="noopener noreferrer" title="Decide Personal Eventual - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Decide_Personal_Eventual.png" alt="Decide Personal Eventual" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <div title="dll" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/DLL.png" alt="dll" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </div>
+        <div title="Ecomuro" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Ecomuro.jpeg" alt="Ecomuro" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </div>
+        <a href="https://www.surcoseguros.com.ar/" target="_blank" rel="noopener noreferrer" title="El Surco Alquileres - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/El_Surco_Alquileres.jpg" alt="El Surco Alquileres" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://exsa.com.ar/" target="_blank" rel="noopener noreferrer" title="Exsa Insumos Médicos - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Exsa_Insumos_Medicos.jpeg" alt="Exsa Insumos Médicos" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.google.com/search?q=golicar%20chapa%20y%20pintura&amp;rlz=1C1GCEU_enAR821AR821&amp;oq=golicar&amp;aqs=chrome.2.69i57j46i19i175i199j69i59.3484j0j4&amp;sourceid=chrome&amp;ie=UTF-8&amp;tbs=lf:1,lf_ui:14&amp;tbm=lcl&amp;sxsrf=APq-WBvt_-ru45P7GrxF8Q2JlgWWxl0lMQ:1648516755662&amp;rflfq=1&amp;num=10&amp;rldimm=9153166448803107183&amp;lqi=Chdnb2xpY2FyIGNoYXBhIHkgcGludHVyYVolIhdnb2xpY2FyIGNoYXBhIHkgcGludHVyYSoCCAIqBggDEAEQApIBDmF1dG9fYm9keV9zaG9wmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5CZVUxVGEycDNSUkFCqgEXEAEqEyIPY2hhcGEgeSBwaW50dXJhKA4&amp;ved=2ahUKEwiql4K9k-r2AhUsxoUKHdXAAaIQvS56BAgKEAE&amp;rlst=f#rlfi=hd:;si:9153166448803107183,l,Chdnb2xpY2FyIGNoYXBhIHkgcGludHVyYVolIhdnb2xpY2FyIGNoYXBhIHkgcGludHVyYSoCCAIqBggDEAEQApIBDmF1dG9fYm9keV9zaG9wmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5CZVUxVGEycDNSUkFCqgEXEAEqEyIPY2hhcGEgeSBwaW50dXJhKA4;mv:%5B%5B-34.4240835,-58.5456913%5D,%5B-34.5094352,-58.72388839999999%5D%5D;tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:14" target="_blank" rel="noopener noreferrer" title="Golicar Chapa y pintura - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Golicar_Chapa_y_Pintura.png" alt="Golicar Chapa y pintura" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="http://hbd.com.ar/" target="_blank" rel="noopener noreferrer" title="HBD Construcciones - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/HBD_Construcciones.jpeg" alt="HBD Construcciones" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://ifranet.com.ar/" target="_blank" rel="noopener noreferrer" title="Ifranet - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Ifranet.png" alt="Ifranet" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="http://cervezaimperial.com.ar/age-gate/" target="_blank" rel="noopener noreferrer" title="Imperial - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Cerveza_Imperial.jpg" alt="Imperial" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.calzadoskeek.com.ar/" target="_blank" rel="noopener noreferrer" title="Keek - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Calzados_Keek.jpeg" alt="Keek" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <div title="Kinetic Solutions" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Kinetic_Solutions.png" alt="Kinetic Solutions" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </div>
+        <a href="https://www.lodgelamision.com.ar/" target="_blank" rel="noopener noreferrer" title="La Mision Moconá - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/La_Mision_Mocona_Lodge.jpg" alt="La Mision Moconá" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.lego.com/es-ar" target="_blank" rel="noopener noreferrer" title="Lego - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Lego.png" alt="Lego" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.lisboainmobiliaria.com.ar/" target="_blank" rel="noopener noreferrer" title="Lisboa Inmobiliaria - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Lisboa_Inmobiliaria.png" alt="Lisboa Inmobiliaria" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.moconnorpropiedades.com.ar/" target="_blank" rel="noopener noreferrer" title="M.Oconnor - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/M_Oconnor_Propiedades.jpeg" alt="M.Oconnor" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.marcovecchio-prop.com.ar/" target="_blank" rel="noopener noreferrer" title="Marcoveccio Propiedades - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Marcovecchio_Propiedades.jpeg" alt="Marcoveccio Propiedades" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <div title="Meta" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Meta.jpg" alt="Meta" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </div>
+        <div title="MLMolina" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Maria_Laura_Molina_Estudio_Inmobiliario.png" alt="MLMolina" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </div>
+        <a href="http://www.nancyfurst.com.ar/" target="_blank" rel="noopener noreferrer" title="Nancy Furs Automotores - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Nancy_Furst_Automotores.jpeg" alt="Nancy Furs Automotores" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://nglogistica.com.ar/" target="_blank" rel="noopener noreferrer" title="NG Logística - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/NG_Logistica.jpeg" alt="NG Logística" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://norsupply.com.ar/" target="_blank" rel="noopener noreferrer" title="Nor Supply - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Nor_Supply.png" alt="Nor Supply" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.onsports.com.ar/" target="_blank" rel="noopener noreferrer" title="On Sport - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/On_Sports.png" alt="On Sport" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.pantuss.com.ar/" target="_blank" rel="noopener noreferrer" title="Pantuss - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Pantuss.jpeg" alt="Pantuss" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.papelerabenavidez.com.ar" target="_blank" rel="noopener noreferrer" title="Papelera Benavidez - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Papelera_Benavidez.png" alt="Papelera Benavidez" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://perfiles.com.ar/" target="_blank" rel="noopener noreferrer" title="Perfiles - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Perfiles.jpeg" alt="Perfiles" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="http://providencia.com.ar/" target="_blank" rel="noopener noreferrer" title="Providencia Seguros - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Providencia_Seguros.jpg" alt="Providencia Seguros" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.refrigeracionhk.com.ar/" target="_blank" rel="noopener noreferrer" title="Refrigeracion HK - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Refrigeracion_HK.jpeg" alt="Refrigeracion HK" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.scalisisubastas.com.ar/" target="_blank" rel="noopener noreferrer" title="scalisi - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Scalisi_Subastas.png" alt="scalisi" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://siasalogistica.com.ar/" target="_blank" rel="noopener noreferrer" title="Siasa Logistica - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Siasa_Logistica.jpeg" alt="Siasa Logistica" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://tmlogistica.com.ar/" target="_blank" rel="noopener noreferrer" title="tmlLogistica - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/TML_Logistica.jpg" alt="tmlLogistica" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://uces.edu.ar/" target="_blank" rel="noopener noreferrer" title="Uces - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/UCES_Universidad.jpeg" alt="Uces" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <div title="ABConsulting" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/AB_Consulting.jpeg" alt="ABConsulting" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </div>
+        <a href="http://admdelnorte.com.ar/" target="_blank" rel="noopener noreferrer" title="Administracion del norte - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Administracion_del_Norte.jpeg" alt="Administracion del norte" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <div title="Agrogranadera" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Agrogranadera.jpeg" alt="Agrogranadera" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </div>
+        <a href="https://www.albanopino.com/" target="_blank" rel="noopener noreferrer" title="Albano Pino - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Albano_Pino.png" alt="Albano Pino" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://americanmatrix.com.ar/" target="_blank" rel="noopener noreferrer" title="American Matrix - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/American_Matrix.jpeg" alt="American Matrix" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://aredesasociados.com.ar/" target="_blank" rel="noopener noreferrer" title="Aredes Asociados - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Aredes_Asociados.jpeg" alt="Aredes Asociados" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://grupobonprix.com.ar/" target="_blank" rel="noopener noreferrer" title="Bonprix - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Bonprix.jpeg" alt="Bonprix" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.boston.com.ar/" target="_blank" rel="noopener noreferrer" title="Boston Seguros - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Boston_Seguros.png" alt="Boston Seguros" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://burger54.com.ar/" target="_blank" rel="noopener noreferrer" title="Burguer 54 - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Burger_54.png" alt="Burguer 54" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <div title="Carnes San Cayentano" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Carnes_San_Cayetano.jpeg" alt="Carnes San Cayentano" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </div>
+        <a href="https://www.fabulinusberni.com/primaria/index.php" target="_blank" rel="noopener noreferrer" title="Colegio Verni - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Fabulinus_Colegio_Berni.jpeg" alt="Colegio Verni" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="http://www.conejo-negro.com/" target="_blank" rel="noopener noreferrer" title="Conejo Negro - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Conejo_Negro.jpeg" alt="Conejo Negro" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.crematorioprivado.com.ar/" target="_blank" rel="noopener noreferrer" title="Crematorio San isidro - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Crematorio_San_Isidro.png" alt="Crematorio San isidro" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="http://www.decide.com.ar/" target="_blank" rel="noopener noreferrer" title="Decide Personal Eventual - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Decide_Personal_Eventual.png" alt="Decide Personal Eventual" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <div title="dll" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/DLL.png" alt="dll" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </div>
+        <div title="Ecomuro" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Ecomuro.jpeg" alt="Ecomuro" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </div>
+        <a href="https://www.surcoseguros.com.ar/" target="_blank" rel="noopener noreferrer" title="El Surco Alquileres - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/El_Surco_Alquileres.jpg" alt="El Surco Alquileres" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://exsa.com.ar/" target="_blank" rel="noopener noreferrer" title="Exsa Insumos Médicos - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Exsa_Insumos_Medicos.jpeg" alt="Exsa Insumos Médicos" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.google.com/search?q=golicar%20chapa%20y%20pintura&amp;rlz=1C1GCEU_enAR821AR821&amp;oq=golicar&amp;aqs=chrome.2.69i57j46i19i175i199j69i59.3484j0j4&amp;sourceid=chrome&amp;ie=UTF-8&amp;tbs=lf:1,lf_ui:14&amp;tbm=lcl&amp;sxsrf=APq-WBvt_-ru45P7GrxF8Q2JlgWWxl0lMQ:1648516755662&amp;rflfq=1&amp;num=10&amp;rldimm=9153166448803107183&amp;lqi=Chdnb2xpY2FyIGNoYXBhIHkgcGludHVyYVolIhdnb2xpY2FyIGNoYXBhIHkgcGludHVyYSoCCAIqBggDEAEQApIBDmF1dG9fYm9keV9zaG9wmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5CZVUxVGEycDNSUkFCqgEXEAEqEyIPY2hhcGEgeSBwaW50dXJhKA4&amp;ved=2ahUKEwiql4K9k-r2AhUsxoUKHdXAAaIQvS56BAgKEAE&amp;rlst=f#rlfi=hd:;si:9153166448803107183,l,Chdnb2xpY2FyIGNoYXBhIHkgcGludHVyYVolIhdnb2xpY2FyIGNoYXBhIHkgcGludHVyYSoCCAIqBggDEAEQApIBDmF1dG9fYm9keV9zaG9wmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5CZVUxVGEycDNSUkFCqgEXEAEqEyIPY2hhcGEgeSBwaW50dXJhKA4;mv:%5B%5B-34.4240835,-58.5456913%5D,%5B-34.5094352,-58.72388839999999%5D%5D;tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAE,lf:1,lf_ui:14" target="_blank" rel="noopener noreferrer" title="Golicar Chapa y pintura - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Golicar_Chapa_y_Pintura.png" alt="Golicar Chapa y pintura" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="http://hbd.com.ar/" target="_blank" rel="noopener noreferrer" title="HBD Construcciones - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/HBD_Construcciones.jpeg" alt="HBD Construcciones" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://ifranet.com.ar/" target="_blank" rel="noopener noreferrer" title="Ifranet - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Ifranet.png" alt="Ifranet" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="http://cervezaimperial.com.ar/age-gate/" target="_blank" rel="noopener noreferrer" title="Imperial - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Cerveza_Imperial.jpg" alt="Imperial" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.calzadoskeek.com.ar/" target="_blank" rel="noopener noreferrer" title="Keek - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Calzados_Keek.jpeg" alt="Keek" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <div title="Kinetic Solutions" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Kinetic_Solutions.png" alt="Kinetic Solutions" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </div>
+        <a href="https://www.lodgelamision.com.ar/" target="_blank" rel="noopener noreferrer" title="La Mision Moconá - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/La_Mision_Mocona_Lodge.jpg" alt="La Mision Moconá" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.lego.com/es-ar" target="_blank" rel="noopener noreferrer" title="Lego - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Lego.png" alt="Lego" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.lisboainmobiliaria.com.ar/" target="_blank" rel="noopener noreferrer" title="Lisboa Inmobiliaria - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Lisboa_Inmobiliaria.png" alt="Lisboa Inmobiliaria" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.moconnorpropiedades.com.ar/" target="_blank" rel="noopener noreferrer" title="M.Oconnor - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/M_Oconnor_Propiedades.jpeg" alt="M.Oconnor" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.marcovecchio-prop.com.ar/" target="_blank" rel="noopener noreferrer" title="Marcoveccio Propiedades - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Marcovecchio_Propiedades.jpeg" alt="Marcoveccio Propiedades" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <div title="Meta" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Meta.jpg" alt="Meta" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </div>
+        <div title="MLMolina" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Maria_Laura_Molina_Estudio_Inmobiliario.png" alt="MLMolina" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </div>
+        <a href="http://www.nancyfurst.com.ar/" target="_blank" rel="noopener noreferrer" title="Nancy Furs Automotores - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Nancy_Furst_Automotores.jpeg" alt="Nancy Furs Automotores" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://nglogistica.com.ar/" target="_blank" rel="noopener noreferrer" title="NG Logística - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/NG_Logistica.jpeg" alt="NG Logística" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://norsupply.com.ar/" target="_blank" rel="noopener noreferrer" title="Nor Supply - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Nor_Supply.png" alt="Nor Supply" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.onsports.com.ar/" target="_blank" rel="noopener noreferrer" title="On Sport - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/On_Sports.png" alt="On Sport" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.pantuss.com.ar/" target="_blank" rel="noopener noreferrer" title="Pantuss - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Pantuss.jpeg" alt="Pantuss" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.papelerabenavidez.com.ar" target="_blank" rel="noopener noreferrer" title="Papelera Benavidez - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Papelera_Benavidez.png" alt="Papelera Benavidez" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://perfiles.com.ar/" target="_blank" rel="noopener noreferrer" title="Perfiles - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Perfiles.jpeg" alt="Perfiles" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="http://providencia.com.ar/" target="_blank" rel="noopener noreferrer" title="Providencia Seguros - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Providencia_Seguros.jpg" alt="Providencia Seguros" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.refrigeracionhk.com.ar/" target="_blank" rel="noopener noreferrer" title="Refrigeracion HK - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Refrigeracion_HK.jpeg" alt="Refrigeracion HK" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://www.scalisisubastas.com.ar/" target="_blank" rel="noopener noreferrer" title="scalisi - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Scalisi_Subastas.png" alt="scalisi" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://siasalogistica.com.ar/" target="_blank" rel="noopener noreferrer" title="Siasa Logistica - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/Siasa_Logistica.jpeg" alt="Siasa Logistica" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://tmlogistica.com.ar/" target="_blank" rel="noopener noreferrer" title="tmlLogistica - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/TML_Logistica.jpg" alt="tmlLogistica" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+        <a href="https://uces.edu.ar/" target="_blank" rel="noopener noreferrer" title="Uces - Sitio Oficial" class="h-14 px-4 py-2 bg-white rounded-xl border border-[#E5E0D5] hover:border-emerald-600/50 flex items-center justify-center shadow-xs hover:shadow-md transition-all shrink-0 group">
+          <img src="assets/sponsors_delta_rugby/UCES_Universidad.jpeg" alt="Uces" loading="lazy" class="max-h-8 max-w-[100px] w-auto h-auto object-contain filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-200">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="bg-delta-green-dark text-white pt-14 pb-28 md:pb-12 border-t border-emerald-900/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-emerald-900/50">
+        <a href="#mainHeader" class="flex items-center gap-3 group brand-logo-link cursor-pointer" title="Subir al inicio">
+          <img src="assets/logo_delta_pro_badge.svg" alt="Delta RC" class="w-10 h-12 group-hover:scale-105 transition-transform">
+          <div>
+            <span class="font-heading font-black text-lg text-white transition-colors">DELTA RUGBY CLUB</span>
+            <p class="text-xs text-gray-300">Olivares 168, Rincón de Milberg, Tigre</p>
+          </div>
+        </a>
+
+        <div class="flex items-center gap-4 text-xs text-gray-300">
+          <a href="index.html" class="hover:text-emerald-300">Inicio</a>
+          <a href="index.html#club" class="hover:text-emerald-300">El Club</a>
+          <a href="index.html#fixture" class="hover:text-emerald-300">Fixture URBA</a>
+          <a href="index.html#socios" class="hover:text-emerald-300">Sede Virtual</a>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t border-emerald-900/60 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-3">
+        <p>&copy; 2026 Delta Rugby Club • Afiliado a la URBA y AAHBA</p>
+        <a href="https://trit.ar/" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 text-gray-400 hover:text-emerald-300 transition-colors group">
+          <span>Desarrollado por</span>
+          <img src="assets/logo_trit.svg" alt="Trit Software Factory" class="w-4 h-4 object-contain opacity-85 group-hover:opacity-100 transition-opacity">
+          <span class="text-gray-300 group-hover:text-white font-semibold">Trit Software Factory</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MOBILE DOCK BAR (REACT BITS DOCK PATTERN - PERSISTENTE EN SMARTPHONES)
+       ========================================================================= -->
+  <nav id="mobileDock" class="mobile-dock-wrapper md:hidden" aria-label="Navegación móvil">
+    <div class="mobile-dock-panel" role="toolbar" aria-label="Application dock">
+      <!-- Pastilla deslizante animada -->
+      <div class="mobile-dock-indicator" aria-hidden="true"></div>
+      
+      <!-- Item 1: Inicio -->
+      <a href="index.html#hero" class="mobile-dock-item" aria-label="Inicio">
+        <div class="dock-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        </div>
+        <span class="mobile-dock-label" role="tooltip">Inicio</span>
+      </a>
+
+      <!-- Item 2: Deportes (Activo en deportes.html) -->
+      <a href="#deportes-hub" class="mobile-dock-item active" aria-label="Deportes">
+        <div class="dock-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <span class="mobile-dock-label" role="tooltip">Deportes</span>
+        <span class="mobile-dock-active-dot"></span>
+      </a>
+
+      <!-- Item 3: Fixture -->
+      <a href="index.html#fixture" class="mobile-dock-item" aria-label="Fixture URBA">
+        <div class="dock-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        </div>
+        <span class="mobile-dock-label" role="tooltip">Fixture</span>
+      </a>
+
+      <!-- Item 4: Cuotas -->
+      <a href="index.html#socios" class="mobile-dock-item" aria-label="Cuotas y Sede">
+        <div class="dock-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+        </div>
+        <span class="mobile-dock-label" role="tooltip">Cuotas</span>
+      </a>
+
+      <!-- Item 5: Asociate (CTA) -->
+      <button class="open-register-modal mobile-dock-item dock-cta" aria-label="Asociate al club">
+        <div class="dock-icon">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/></svg>
+        </div>
+        <span class="mobile-dock-label" role="tooltip">Asociate</span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       MODAL DE PRE-INSCRIPCIÓN
+       ========================================================================= -->
+  <div id="registerModal" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-xl max-w-lg w-full overflow-hidden shadow-2xl border border-gray-300">
+      
+      <!-- Modal Header -->
+      <div class="bg-delta-green-dark p-6 text-white flex items-center justify-between border-b border-emerald-900">
+        <div class="flex items-center gap-3">
+          <img src="assets/logo_delta_pro_badge.svg" alt="Delta RC" class="w-10 h-11">
+          <div>
+            <span class="font-heading font-extrabold text-lg text-white">Pre-Inscripción Deportiva</span>
+            <p class="text-xs text-delta-gold">Secretaría Deportiva • Delta Rugby Club</p>
+          </div>
+        </div>
+        <button class="close-register-modal p-2 text-gray-400 hover:text-white rounded-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 sm:p-8">
+        <div id="modalFormContainer">
+          <form id="registerForm" class="space-y-4">
+            <div>
+              <label for="regName" class="block text-xs font-semibold text-gray-800 mb-1">Nombre completo del deportista</label>
+              <input type="text" id="regName" required placeholder="Ej: Valentina Morales" class="w-full bg-[#FAF9F6] border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:border-[#0E3D2F] focus:outline-none">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="regSport" class="block text-xs font-semibold text-gray-800 mb-1">Disciplina</label>
+                <select id="regSport" class="w-full bg-[#FAF9F6] border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:border-[#0E3D2F] focus:outline-none">
+                  <option value="rugby">Rugby</option>
+                  <option value="hockey">Hockey</option>
+                </select>
+              </div>
+              <div>
+                <label for="regDivision" class="block text-xs font-semibold text-gray-800 mb-1">División o edad</label>
+                <select id="regDivision" class="w-full bg-[#FAF9F6] border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:border-[#0E3D2F] focus:outline-none">
+                  <option value="Infantiles (5 a 14 años)">Infantiles (5 a 14 años)</option>
+                  <option value="Juveniles (15 a 19 años)">Juveniles (15 a 19 años)</option>
+                  <option value="Plantel Superior">Plantel Superior</option>
+                  <option value="Veteranos / Classic / Mamis (+35)">Veteranos / Classic / Mamis (+35)</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="regPhone" class="block text-xs font-semibold text-gray-800 mb-1">Teléfono celular (WhatsApp)</label>
+              <input type="tel" id="regPhone" required placeholder="Ej: 11 4050 3320" class="w-full bg-[#FAF9F6] border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:border-[#0E3D2F] focus:outline-none">
+            </div>
+
+            <p class="text-[11px] text-gray-600">
+              Al enviar, se abrirá una conversación con la Secretaría del club para coordinar tu primer entrenamiento sin cargo y enviarte la ficha médica oficial.
+            </p>
+
+            <button type="submit" class="w-full py-3 bg-[#C92A34] hover:bg-[#A51D25] text-white font-bold text-sm rounded-lg transition-colors flex items-center justify-center gap-2">
+              <span>Enviar solicitud por WhatsApp</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </form>
+        </div>
+
+        <div id="modalSuccessContainer" class="hidden text-center py-6 space-y-4">
+          <div class="w-14 h-14 rounded-full bg-emerald-100 text-[#0E3D2F] mx-auto flex items-center justify-center">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <h4 class="font-heading font-bold text-xl text-gray-900">Solicitud generada con éxito</h4>
+          <p class="text-xs text-gray-600 max-w-sm mx-auto">
+            Te estamos redirigiendo a la Secretaría Deportiva de Delta Rugby Club. ¡Te esperamos en la cancha!
+          </p>
+          <button class="close-register-modal px-6 py-2 bg-gray-100 text-gray-700 rounded-lg text-xs font-bold hover:bg-gray-200">
+            Cerrar
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/sports-data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // Handle URL query parameters for auto-selecting sport tab
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const tab = urlParams.get('tab');
+      if (tab === 'hockey') {
+        const hockeyTabBtn = document.getElementById('tabHockeyBtn');
+        if (hockeyTabBtn) hockeyTabBtn.click();
+      }
+    });
+  </script>
+</body>
+</html>
